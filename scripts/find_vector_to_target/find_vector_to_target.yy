@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"find_vector_to_target",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"find_vector_to_target",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

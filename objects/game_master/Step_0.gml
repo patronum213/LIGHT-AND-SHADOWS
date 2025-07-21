@@ -1,0 +1,18 @@
+/// @description Insert description here
+// You can write your code in this editor
+if (new_room) {
+player.xstart = starting_pos.x;
+player.ystart = starting_pos.y;
+player.x = player.xstart;
+player.y = player.ystart;
+new_room = false;
+}
+camera = {
+	id : camera_get_active(),
+	x : camera_get_view_x(view_camera[0]),
+	y : camera_get_view_y(view_camera[0])
+}; 
+
+
+if (keyboard_check(vk_shift) and keyboard_check_pressed(ord("R"))) {game_restart();}
+else if (keyboard_check_pressed(ord("R"))) {room_restart(); new_room = true;};

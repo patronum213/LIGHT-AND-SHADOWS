@@ -1,0 +1,54 @@
+/// @description Insert description here
+// You can write your code in this editor
+
+if (
+mouse_check_button(mb_right) and 
+collision_point(mouse_x, mouse_y, id, false, false) and
+(sqrt(power(player.x - x, 2) + power(player.y - y, 2)) < 300) and 
+!player.in_dialouge and !in_dialouge_with_player) {
+	player.in_dialouge = true;
+	in_dialouge_with_player = true; 
+	interaction_progress = 0;
+	
+	dialogue_text = layer_text_create(game_master.dialogue_layer, game_master.camera.x + text_x, game_master.camera.y + text_y, Font_1, dialogue[interaction_progress]);
+	layer_text_framew(dialogue_text, framew);
+	layer_text_frameh(dialogue_text, frameh);
+	layer_text_wrap(dialogue_text, true);
+
+	dialogue_box = layer_sprite_create(game_master.dialogue_layer, game_master.camera.x + spr_x, game_master.camera.y + spr_y, box_sprite);
+	layer_sprite_xscale(dialogue_box, size_multiplier);
+	layer_sprite_yscale(dialogue_box, size_multiplier);
+	
+	layer_set_visible(game_master.dialogue_layer, true);
+	if (is_array(dialogue[interaction_progress])) {
+			layer_text_text(dialogue_text, dialogue[interaction_progress][0]);
+			array_push(do_dialogue_functions, dialogue[interaction_progress][1])
+		}
+		else { 
+			
+			layer_text_text(dialogue_text, dialogue[interaction_progress]);
+		}
+}
+if (in_dialouge_with_player and keyboard_check_pressed(vk_space)) {
+	if (interaction_progress < array_length(dialogue)-1) {
+		interaction_progress += 1;
+		if (is_array(dialogue[interaction_progress])) {
+			layer_text_text(dialogue_text, dialogue[interaction_progress][0]);
+			array_push(do_dialogue_functions, dialogue[interaction_progress][1])
+		}
+		else { 
+			layer_text_text(dialogue_text, dialogue[interaction_progress]);
+		}
+	}
+	else if (interaction_progress >= array_length(dialogue)-1) {
+	layer_sprite_destroy(dialogue_box);
+	layer_text_destroy(dialogue_text);
+	player.in_dialouge = false;
+	in_dialouge_with_player = false;
+	layer_set_visible(game_master.dialogue_layer, false);
+	}
+}
+if (array_contains(do_dialogue_functions, "set_state_moon")) {player.state = "moon"; array_pop(do_dialogue_functions);};
+if (array_contains(do_dialogue_functions, "set_state_sun")) {player.state = "sun"; array_pop(do_dialogue_functions);};
+if (array_contains(do_dialogue_functions, "restore_soul")) {player.soul_amount = 100; array_pop(do_dialogue_functions);};
+if (array_contains(do_dialogue_functions, "restore_body")) {player.integrity = 100; array_pop(do_dialogue_functions);};
