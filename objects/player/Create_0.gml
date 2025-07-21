@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//github test change: branch 
-
 in_dialouge = false;
 
 anamation_state = "start";
