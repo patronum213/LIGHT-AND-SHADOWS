@@ -52,6 +52,7 @@
   "name":"LIGHT AND SHADOWS",
   "resources":[
     {"id":{"name":"Font_1","path":"fonts/Font_1/Font_1.yy",},},
+    {"id":{"name":"AI_test","path":"objects/AI_test/AI_test.yy",},},
     {"id":{"name":"bomb","path":"objects/bomb/bomb.yy",},},
     {"id":{"name":"bullet","path":"objects/bullet/bullet.yy",},},
     {"id":{"name":"clay","path":"objects/clay/clay.yy",},},
@@ -70,6 +71,7 @@
     {"id":{"name":"sword_swing","path":"objects/sword_swing/sword_swing.yy",},},
     {"id":{"name":"Room1_old","path":"rooms/Room1_old/Room1_old.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"AI","path":"scripts/AI/AI.yy",},},
     {"id":{"name":"check_collision","path":"scripts/check_collision/check_collision.yy",},},
     {"id":{"name":"check_tilemap","path":"scripts/check_tilemap/check_tilemap.yy",},},
     {"id":{"name":"do_damage","path":"scripts/do_damage/do_damage.yy",},},
@@ -105,7 +107,6 @@
     {"id":{"name":"spr_terrain_day","path":"sprites/spr_terrain_day/spr_terrain_day.yy",},},
     {"id":{"name":"spr_terrain_night","path":"sprites/spr_terrain_night/spr_terrain_night.yy",},},
     {"id":{"name":"Sprite21","path":"sprites/Sprite21/Sprite21.yy",},},
-    {"id":{"name":"Sprite31","path":"sprites/Sprite31/Sprite31.yy",},},
     {"id":{"name":"test_sprite","path":"sprites/test_sprite/test_sprite.yy",},},
     {"id":{"name":"test_tileset","path":"sprites/test_tileset/test_tileset.yy",},},
     {"id":{"name":"white","path":"sprites/white/white.yy",},},

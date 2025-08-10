@@ -7,7 +7,3 @@ array_foreach(effects, function (_item, _index) {
 	if (_item[1] > 0) {_item[1] -= 1}
 	else if (_item[1] <= 0) {array_delete(effects, _index, 1)}
 })
-
-if (keyboard_check_pressed(vk_shift)) {
-instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 10});
-}

@@ -20,12 +20,14 @@ function do_damage(taker, amount, dealer = id, special = ["none"]) {
 		//referces for effects: first item in array should be declairative "effect", 
 		//2nd should be the actual effect, 3rd should be the duration
 		//any other arguments like strenght can be added from there on on a case by case basis
+		temp_taker = taker
+		temp_dealer = dealer
 		if (special != ["none"]) {
 		array_foreach(special, function (_item, _index) {
 			if (is_array(_item)) {//for specials that are passed as arrays
 			switch(_item[0]) {
 				case "effect":
-					variable_instance_set(taker, effects, array_push(effects, array_shift(_item)));
+					variable_instance_set(temp_taker, effects, array_push(effects, array_shift(_item)));
 				break;
 				default:
 				show_debug_message("unknown damage special type: " + _item[0])
@@ -34,6 +36,12 @@ function do_damage(taker, amount, dealer = id, special = ["none"]) {
 			}
 			else {
 			switch(_item) {//for specials that are single argument
+				case "stick":
+				
+					with (temp_taker) {
+					x += 100
+					}
+				break;
 				default:
 				show_debug_message("unknown damage special type: " + _item)
 				break;

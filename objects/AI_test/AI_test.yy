@@ -1,19 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"combat_entity_1",
+  "%Name":"AI_test",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"combat_entity_1",
+  "name":"AI_test",
   "overriddenProperties":[],
   "parent":{
     "name":"enemies",
     "path":"folders/Objects/enemies.yy",
   },
   "parentObjectId":{
-    "name":"combat_entity_parent",
-    "path":"objects/combat_entity_parent/combat_entity_parent.yy",
+    "name":"combat_entity_1",
+    "path":"objects/combat_entity_1/combat_entity_1.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -33,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_explosion",
-    "path":"sprites/spr_explosion/spr_explosion.yy",
+    "name":"spr_cat_talking",
+    "path":"sprites/spr_cat_talking/spr_cat_talking.yy",
   },
   "spriteMaskId":null,
   "visible":true,
