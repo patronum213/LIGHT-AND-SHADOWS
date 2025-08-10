@@ -68,7 +68,7 @@ if (!in_dialouge) {
 		attack = instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 50});
 	};
 	if mouse_check_button_pressed(mb_right) {
-		attack = instance_create_layer(x, y, "Instances", bullet, {owner : id, damage: 50, vel_x: 10, vel_y: 0});
+		attack = instance_create_layer(x, y, "Instances", bullet, {owner : id, damage: 50, vel_x: 1, vel_y: 0});
 	};
 	if (iframes > 0) {damagable = false; iframes -=1;}
 	else {damagable = true;}

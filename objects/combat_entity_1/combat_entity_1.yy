@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"bullet",
+  "%Name":"combat_entity_1",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"bullet",
+  "name":"combat_entity_1",
   "overriddenProperties":[],
   "parent":{
-    "name":"combat",
-    "path":"folders/Objects/player/combat.yy",
+    "name":"enemies",
+    "path":"folders/Objects/enemies.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"combat_entity_parent",
+    "path":"objects/combat_entity_parent/combat_entity_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_paper",
-    "path":"sprites/spr_paper/spr_paper.yy",
+    "name":"spr_explosion",
+    "path":"sprites/spr_explosion/spr_explosion.yy",
   },
   "spriteMaskId":null,
   "visible":true,
