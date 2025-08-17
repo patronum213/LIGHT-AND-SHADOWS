@@ -27,11 +27,14 @@ while (remainder_x != 0 or remainder_y != 0) {
 			{
 					show_debug_message("combat entity case")
 					do_damage(collided_object, damage, owner);
+					instance_destroy();
+					break;
 			}
 		}
 		else if (collided_object == game_master.collision_tilemap) {
 			show_debug_message("collides with player/tilemap case")
 			instance_destroy();
+			break;
 		}
 		array_push(collision_blacklist, collided_object);
 		collided_object = move_with_collision(id, x, y, remainder_x, remainder_y, [combat_entity_parent, game_master.collision_tilemap, collides_with_player], collision_blacklist);

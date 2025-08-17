@@ -1,21 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"AI_test",
+  "%Name":"evil_sword_swing",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"AI_test",
+  "name":"evil_sword_swing",
   "overriddenProperties":[],
   "parent":{
     "name":"enemies",
     "path":"folders/Objects/enemies.yy",
   },
-  "parentObjectId":{
-    "name":"enemy_parent",
-    "path":"objects/enemy_parent/enemy_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -34,9 +31,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cat_talking",
-    "path":"sprites/spr_cat_talking/spr_cat_talking.yy",
+    "name":"spr_sword_swing",
+    "path":"sprites/spr_sword_swing/spr_sword_swing.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"hitbox_sword_swing",
+    "path":"sprites/hitbox_sword_swing/hitbox_sword_swing.yy",
+  },
   "visible":true,
 }

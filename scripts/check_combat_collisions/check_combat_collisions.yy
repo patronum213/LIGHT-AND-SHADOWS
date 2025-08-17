@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"AI",
+  "%Name":"check_combat_collisions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"AI",
+  "name":"check_combat_collisions",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

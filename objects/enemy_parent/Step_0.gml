@@ -1,19 +1,25 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function AI(){
-	show_debug_message("default AI")
+/// @description Insert description here
+// You can write your code in this editor
+event_inherited();
+
+if (keyboard_check_pressed(vk_shift)) {
+instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 10});
 }
-function test_AI(target = player, me = id) {
-	with (me) {
-	vel_x = 0;
-	vel_y = 0;
-	remainder_x = 0;
-	remainder_y = 0;
-	if (x < player.x) {vel_x +=1}
-	else if (x > player.x) {vel_x -=1}
-	
+
+if (place_meeting(x, y, combat_entity_parent)) {
+	var _list = ds_list_create();
+	var _num = instance_place_list(x, y, combat_entity_parent, _list, false);
+	for (var i = 0; i < _num; ++i;)
+	{
+		do_damage(_list[| i], 5, id, ["none"])
+	}
+	ds_list_destroy(_list);
+};
+
+//movement
+{
 	collided_object = move_with_collision(id, x, y, vel_x, vel_y, [game_master.collision_tilemap, collides_with_player]);
-while (remainder_x != 0 or remainder_y != 0) {
+	while (remainder_x != 0 or remainder_y != 0) {
 	//collision arrays, each if corrisponds to the effect of colliding with something
 	switch (collided_object)
 		{
@@ -24,7 +30,6 @@ while (remainder_x != 0 or remainder_y != 0) {
 			) {
 				vel_x = 0;
 				remainder_x = 0;
-				show_debug_message("xcol")
 			}
 			if (
 			check_tilemap(game_master.collision_tilemap, 0, 1) or
@@ -32,7 +37,6 @@ while (remainder_x != 0 or remainder_y != 0) {
 			) {
 				vel_y = 0;
 				remainder_y = 0;
-				show_debug_message("ycol")
 			}
 		break;
 		case collides_with_player:
@@ -42,7 +46,6 @@ while (remainder_x != 0 or remainder_y != 0) {
 			) {
 				vel_x = 0;
 				remainder_x = 0;
-				//show_debug_message("xcol")
 			}
 			if (
 			(instance_place(x, y+1, collides_with_player) != noone) or
@@ -50,12 +53,10 @@ while (remainder_x != 0 or remainder_y != 0) {
 			) {
 				vel_y = 0;
 				remainder_y = 0;
-				//show_debug_message("ycol")
 			}
 		break;
 		default:
 			collided_object = move_with_collision(id, x, y, remainder_x, remainder_y, [game_master.collision_tilemap, collides_with_player]);
 		}
-		}	
-	}
-};
+		}
+}		
