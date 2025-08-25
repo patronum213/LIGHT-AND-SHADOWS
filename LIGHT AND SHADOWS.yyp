@@ -63,6 +63,7 @@
     {"id":{"name":"explosion","path":"objects/explosion/explosion.yy",},},
     {"id":{"name":"game_master","path":"objects/game_master/game_master.yy",},},
     {"id":{"name":"grappling_hook","path":"objects/grappling_hook/grappling_hook.yy",},},
+    {"id":{"name":"item_test","path":"objects/item_test/item_test.yy",},},
     {"id":{"name":"lore_object_parent","path":"objects/lore_object_parent/lore_object_parent.yy",},},
     {"id":{"name":"moon_lily","path":"objects/moon_lily/moon_lily.yy",},},
     {"id":{"name":"npc_parent","path":"objects/npc_parent/npc_parent.yy",},},

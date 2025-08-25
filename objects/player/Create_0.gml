@@ -21,7 +21,6 @@ integrity = 100
 
 grappling = false;
 
-
 dashtank = 60;//two dashes to start, 30 each
 dashmax = 2;//a maxamum of two
 

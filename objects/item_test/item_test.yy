@@ -1,13 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"starting_pos",
-  "eventList":[],
+  "%Name":"item_test",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"starting_pos",
+  "name":"item_test",
   "overriddenProperties":[],
   "parent":{
-    "name":"technical_objects",
-    "path":"folders/Objects/technical_objects.yy",
+    "name":"game_objects",
+    "path":"folders/Objects/game_objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_moon_lily",
+    "path":"sprites/spr_moon_lily/spr_moon_lily.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
