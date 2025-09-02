@@ -1,6 +1,12 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function do_damage(taker, amount, dealer = id, special = ["none"]) {
+	if  (taker.object_index == player and taker.parry_state > 0) {
+		with taker {
+			parry(dealer)
+		}
+		return;
+	}
 	if (taker.damagable or array_contains(special, "ignore iframes")) {
 		show_debug_message(taker.damagable);
 		//show_debug_message(variable_instance_get(taker, "my_health"));

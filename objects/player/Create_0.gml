@@ -68,3 +68,8 @@ iframes = 0;
 my_health = max_health;
 effects = [];
 damagable = true;
+
+parry_state = 0;
+
+
+parry_cooldown = 0;

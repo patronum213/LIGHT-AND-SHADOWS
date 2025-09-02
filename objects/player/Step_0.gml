@@ -64,10 +64,27 @@ if (!in_dialouge) {
 /*------------------------*/
 {
 	
-	if (mouse_check_button_pressed(mb_left) and array_contains(inventory, "test item")) {
-		attack = instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 50});
+//parrying 
+	if (parry_cooldown > 0) {parry_cooldown -= 1};
+	if (parry_state > 0) {parry_state -= 1};
+	
+function parry(dealer) {
+	parry_state = 0;
+	parry_cooldown = 50;
+	show_debug_message("parry!")
+	sparkle = instance_create_layer(x, y, "Instances", parry_sparks);
+}
+//end
+	if (mouse_check_button_pressed(mb_left)) {
+		if (mouse_x < x) { 
+			attack = instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 50, image_xscale : -1});
+		}
+		else {
+			attack = instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 50});
+		}
+		parry_state = 5;
 	};
-	if (mouse_check_button_pressed(mb_right)) {
+	if (mouse_check_button_pressed(mb_right)and array_contains(inventory, "test item")) {
 		attack = instance_create_layer(x, y, "Instances", bullet, {owner : id, damage: 50, vel_x: 1, vel_y: 0});
 	};
 	if (iframes > 0) {damagable = false; iframes -=1;}
@@ -213,7 +230,7 @@ prev_motion_state = motion_state;
 /*    Anamation States    */
 /*------------------------*/
 {
-switch (anamation_state)
+/*switch (anamation_state)
 {
 	case "jumping":
 		sprite_index = spr_moon_jump;
@@ -238,7 +255,7 @@ switch (anamation_state)
 	default: 
 		sprite_index = spr_moon_idle
 		
-}
+}*/
 }
 
 
