@@ -29,7 +29,7 @@
   "origin":4,
   "parent":{
     "name":"abilities",
-    "path":"folders/Sprites/player/abilities.yy",
+    "path":"folders/Sprites/old/abilities.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
