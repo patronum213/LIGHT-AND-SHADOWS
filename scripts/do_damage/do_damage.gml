@@ -43,9 +43,10 @@ function do_damage(taker, amount, dealer = id, special = ["none"]) {
 			else {
 			switch(_item) {//for specials that are single argument
 				case "stick":
-				
+					var vector = multiplied_vector_to_target(temp_dealer.x, temp_dealer.y, temp_taker.x, temp_taker.y, 10)
 					with (temp_taker) {
-					x += 100
+					vel_x += vector[0]
+					vel_y += vector[1]
 					}
 				break;
 				default:

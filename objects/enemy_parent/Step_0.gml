@@ -2,11 +2,7 @@
 // You can write your code in this editor
 event_inherited();
 
-if (keyboard_check_pressed(vk_shift)) {
-instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 10});
-}
-
-if (place_meeting(x, y, combat_entity_parent)) {
+/*if (place_meeting(x, y, combat_entity_parent)) {
 	var _list = ds_list_create();
 	var _num = instance_place_list(x, y, combat_entity_parent, _list, false);
 	for (var i = 0; i < _num; ++i;)
@@ -14,7 +10,7 @@ if (place_meeting(x, y, combat_entity_parent)) {
 		do_damage(_list[| i], 5, id, ["none"])
 	}
 	ds_list_destroy(_list);
-};
+};*/
 
 //movement
 {

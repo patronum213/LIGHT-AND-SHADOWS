@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_sword_swing",
-    "path":"sprites/spr_sword_swing/spr_sword_swing.yy",
+    "name":"hitbox_sword_swing",
+    "path":"sprites/hitbox_sword_swing/hitbox_sword_swing.yy",
   },
   "spriteMaskId":{
     "name":"hitbox_sword_swing",

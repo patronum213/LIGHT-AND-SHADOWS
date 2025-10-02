@@ -3,3 +3,6 @@
 
 event_inherited();
 cooldown = 0;
+unit_state = "idle"
+shielded = true;
+atk_progress = 0;

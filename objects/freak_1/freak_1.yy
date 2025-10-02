@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_cat_talking",
-    "path":"sprites/spr_cat_talking/spr_cat_talking.yy",
+    "name":"spr_freak_1_idle_shield",
+    "path":"sprites/spr_freak_1_idle_shield/spr_freak_1_idle_shield.yy",
   },
   "spriteMaskId":null,
   "visible":true,

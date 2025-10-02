@@ -73,6 +73,11 @@ function parry(dealer) {
 	parry_cooldown = 50;
 	show_debug_message("parry!")
 	sparkle = instance_create_layer(x, y, "Instances", parry_sparks);
+	var _recoil = multiplied_vector_to_target(dealer.x,dealer.y, x, y, 40);
+	show_debug_message(_recoil[0])
+	show_debug_message(_recoil[1])
+	vel_x += _recoil[0]
+	vel_y += _recoil[1]
 }
 //end
 	if (mouse_check_button_pressed(mb_left)) {
@@ -230,7 +235,7 @@ prev_motion_state = motion_state;
 /*    Anamation States    */
 /*------------------------*/
 {
-/*switch (anamation_state)
+switch (anamation_state)
 {
 	case "jumping":
 		sprite_index = spr_moon_jump;
@@ -255,7 +260,7 @@ prev_motion_state = motion_state;
 	default: 
 		sprite_index = spr_moon_idle
 		
-}*/
+}
 }
 
 
