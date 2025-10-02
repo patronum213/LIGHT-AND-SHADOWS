@@ -191,9 +191,12 @@ while (remainder_x != 0 or remainder_y != 0) {
 		default:
 			collided_object = move_with_collision(id, x, y, remainder_x, remainder_y, [game_master.collision_tilemap, collides_with_player]);
 		}
+		collided_object = move_with_collision(id, x, y, remainder_x, remainder_y, [game_master.collision_tilemap, collides_with_player]);
+		//if (collided_object == noone) {remainder_x = 0; remainder_y = 0;}
 		show_debug_message(remainder_y)
 		
 }
+
 }
 
 if (keyboard_check_pressed((ord("T")))) {x = mouse_x; y = mouse_y};//dev hax

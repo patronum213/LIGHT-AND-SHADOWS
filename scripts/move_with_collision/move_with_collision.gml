@@ -52,9 +52,9 @@ repeat (_move_count)
 		// In that case, move_once is added to the X coordinate of the character.
 		_id.x += _move_once
 		_move_count_remaining -= sign(_move_count_remaining);
-	}
-	
+	}	
 };
+variable_instance_set(_id, remainder_x, 0);
 // We now repeat all of the previous steps to check for collisions on the Y axis.
 // Everything is the same, but vel_x is replaced by vel_y, and the check_collision function takes a Y value (its second argument).
 var _move_count = abs(vel_y);
@@ -90,7 +90,6 @@ repeat (_move_count)
 		}
 		if (collided_object != noone and !array_contains(colliding_blacklist, collided_object))
 		{	
-			variable_instance_set(_id, remainder_x, 0);
 			variable_instance_set(_id, remainder_y, _move_count_remaining);
 			return collided_object;
 		}
@@ -107,4 +106,5 @@ repeat (_move_count)
 		_move_count_remaining -= sign(_move_count_remaining);
 	}
 };
+variable_instance_set(_id, remainder_y, 0);
 };
