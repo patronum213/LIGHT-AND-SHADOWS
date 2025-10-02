@@ -8,7 +8,7 @@ if (place_meeting(x, y, combat_entity_parent)) {
 	for (var i = 0; i < _num; ++i;)
 	{
 		if (!(_list[| i] == owner)) {
-		do_damage(_list[| i], damage, owner, ["stick"])
+		do_damage(_list[| i], damage, owner)
 		}
 	}
 	ds_list_destroy(_list);

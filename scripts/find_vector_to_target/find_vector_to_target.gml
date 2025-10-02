@@ -15,7 +15,13 @@ else if ((tx-x) = 0) {return [0, 1];}
 var A = arctan2((tx-x),(ty-y))
 var vect_x = sin(A);
 var vect_y = cos(A);//proof checked by me
-var final_x = vect_x * mult
-var final_y = vect_y * mult
+if (typeof(mult) == "array") {
+	var final_x = vect_x * mult[0]
+	var final_y = vect_y * mult[1]
+}
+else {
+	var final_x = vect_x * mult
+	var final_y = vect_y * mult
+}
 return [final_x, final_y]
 }

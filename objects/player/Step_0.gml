@@ -73,11 +73,15 @@ function parry(dealer) {
 	parry_cooldown = 50;
 	show_debug_message("parry!")
 	sparkle = instance_create_layer(x, y, "Instances", parry_sparks);
-	var _recoil = multiplied_vector_to_target(dealer.x,dealer.y, x, y, 40);
+	if (!grounded) {
+	var _recoil = multiplied_vector_to_target(dealer.x,dealer.y, x, y, [30, 50]);
+	}
+	else {var _recoil = multiplied_vector_to_target(dealer.x,dealer.y, x, y, [30, 0]);}
 	show_debug_message(_recoil[0])
 	show_debug_message(_recoil[1])
 	vel_x += _recoil[0]
 	vel_y += _recoil[1]
+	
 }
 //end
 	if (mouse_check_button_pressed(mb_left)) {
@@ -99,7 +103,6 @@ function parry(dealer) {
 		if (_item[1] > 0) {_item[1] -= 1}
 		else if (_item[1] <= 0) {array_delete(effects, _index, 1)}
 	})
-
 	if (my_health <= 0) {x = xstart; y = ystart;my_health = max_health;show_debug_message("player died!")};
 }
 /*------------------------*/

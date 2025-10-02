@@ -26,7 +26,7 @@ var motion_vel = 1;//positive as a default
 		else if (x > (player.x+attack_distance)) {
 			vel_x = -motion_vel; unit_state = "walk"
 		}	
-		show_debug_message(x < player.x-attack_distance)
+		//show_debug_message(x < player.x-attack_distance)
 	}
 	//gravity
 	if (instance_place(x, y+1, [game_master.collision_tilemap, collides_with_player]) = noone) 
