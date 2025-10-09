@@ -1,16 +1,17 @@
 {
   "$GMObject":"",
-  "%Name":"evil_sword_swing",
+  "%Name":"flashlight_light",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"evil_sword_swing",
+  "name":"flashlight_light",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemies",
-    "path":"folders/Objects/enemies.yy",
+    "name":"lights",
+    "path":"folders/Objects/player/lights.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -34,9 +35,6 @@
     "name":"spr_flashlight_beam",
     "path":"sprites/spr_flashlight_beam/spr_flashlight_beam.yy",
   },
-  "spriteMaskId":{
-    "name":"hitbox_sword_swing",
-    "path":"sprites/hitbox_sword_swing/hitbox_sword_swing.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
