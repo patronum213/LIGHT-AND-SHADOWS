@@ -110,16 +110,27 @@ function parry(dealer) {
 /*------------------------*/
 {
 	if (keyboard_check_pressed(vk_tab)) {
-		if (inventory_open == false) {
-		inventory_open = true;
+		
+		if !(instance_exists(inventory_UI_object)) {
+			inventory_UI_object = instance_create_layer(game_master.camera.x + 80, game_master.camera.y + 80,"UI", UI_inventory, {my_inventory: inventory});
+		}
+		else if (instance_exists(inventory_UI_object)) {
+			instance_destroy(inventory_UI_object, true)
+		}
+		inventory_open = !inventory_open
 		};
-	};
+	
+	
+	
 }
 /*------------------------*/
 /*         lights         */
 /*------------------------*/
 {
+if (mouse_check_button_pressed(mb_right)) {light_on = !light_on};
+ if (light_on) {
  
+ }
 
 }
 /*------------------------*/
@@ -251,27 +262,27 @@ prev_motion_state = motion_state;
 switch (anamation_state)
 {
 	case "jumping":
-		sprite_index = spr_moon_jump;
+		sprite_index = spr_player_jump;
 		if (image_index >= 2) {anamation_state = "vault";}
 	break;
 	case "vault":
-		sprite_index = spr_moon_vault;
+		sprite_index = spr_player_vault;
 	break;
 	case "fall":
-		sprite_index = spr_moon_fall;
+		sprite_index = spr_player_fall;
 	break;
 	case "dashing":
 		sprite_index = spr_moon_dash;
 	break;
 	case "walking":
-		sprite_index = spr_moon_walk;
+		sprite_index = spr_player_run;
 		
-		if (vel_x > 0) {image_xscale = abs(image_xscale);}
-		else if (vel_x < 0) {image_xscale = -abs(image_xscale);}
+		if (vel_x > 0) {image_xscale = -abs(image_xscale);}
+		else if (vel_x < 0) {image_xscale = abs(image_xscale);}
 	break;
 	case "free":
 	default: 
-		sprite_index = spr_moon_idle
+		sprite_index = spr_player_idle
 		
 }
 }

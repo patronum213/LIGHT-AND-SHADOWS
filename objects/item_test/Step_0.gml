@@ -11,3 +11,8 @@ if (distance_to_point(mouse_x, mouse_y) <= 200) {
 }
 else {alpha_monitor = 1}
 image_alpha = abs(alpha_monitor-0.5)+0.5
+
+if (place_meeting(x, y, player)) {
+	array_push(player.inventory, "test_flower");
+	instance_destroy()
+}

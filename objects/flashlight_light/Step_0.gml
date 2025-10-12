@@ -13,3 +13,4 @@ if (place_meeting(x, y, combat_entity_parent)) {
 	ds_list_destroy(_list);
 };
 
+

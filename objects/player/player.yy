@@ -40,12 +40,12 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_moon_idle",
-    "path":"sprites/spr_moon_idle/spr_moon_idle.yy",
+    "name":"spr_player_idle",
+    "path":"sprites/spr_player_idle/spr_player_idle.yy",
   },
   "spriteMaskId":{
-    "name":"player_collision_box",
-    "path":"sprites/player_collision_box/player_collision_box.yy",
+    "name":"spr_player_idle",
+    "path":"sprites/spr_player_idle/spr_player_idle.yy",
   },
   "visible":true,
 }

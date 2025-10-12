@@ -37,6 +37,9 @@
     "name":"spr_freak_1_idle_shield",
     "path":"sprites/spr_freak_1_idle_shield/spr_freak_1_idle_shield.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_freak_1_idle_shield",
+    "path":"sprites/spr_freak_1_idle_shield/spr_freak_1_idle_shield.yy",
+  },
   "visible":true,
 }

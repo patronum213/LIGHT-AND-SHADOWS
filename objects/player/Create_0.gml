@@ -6,12 +6,13 @@ in_dialouge = false;
 anamation_state = "start";
 paused = false;
 
-codexes = [];
 
 my_health = 100;
 
-inventory = [];
+inventory = ["test_paper", "test_clay", "test_clay"];
 inventory_open = false;
+inventory_UI_object = noone
+
 dev_mode = false;
 
 //soul
@@ -70,6 +71,8 @@ effects = [];
 damagable = true;
 
 parry_state = 0;
+
+light_on = false;
 
 
 parry_cooldown = 0;
