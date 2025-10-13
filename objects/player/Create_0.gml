@@ -13,6 +13,11 @@ inventory = ["test_paper", "test_clay", "test_clay"];
 inventory_open = false;
 inventory_UI_object = noone
 
+light = "flashlight"
+light_charge = 100;
+light_on = false;
+light_object = noone
+
 dev_mode = false;
 
 //soul
@@ -72,7 +77,6 @@ damagable = true;
 
 parry_state = 0;
 
-light_on = false;
 
 
 parry_cooldown = 0;

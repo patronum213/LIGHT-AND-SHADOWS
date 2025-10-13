@@ -1,5 +1,3 @@
 /// @description Insert description here
 // You can write your code in this editor
-item_id = "test_flower"
-item = get_item_data(item_id)
-my_tooltip = noone
+alpha_monitor = 0;

@@ -127,10 +127,36 @@ function parry(dealer) {
 /*         lights         */
 /*------------------------*/
 {
-if (mouse_check_button_pressed(mb_right)) {light_on = !light_on};
- if (light_on) {
- 
- }
+	switch (light) {
+		case "flashlight":
+			if (mouse_check_button_pressed(mb_right)) {
+				if !(instance_exists(light_object)) {
+					light_object = instance_create_layer(x, y,"Instances", flashlight_light);
+				}
+				else if (instance_exists(light_object)) {
+					instance_destroy(light_object)
+				}
+				light_on = !light_on
+			};
+			if (light_on) {
+				light_charge -= 1;
+				if (light_charge <= 0) {
+					instance_destroy(light_object);
+					light_on = false;
+				}
+			}
+		break;
+		default:
+			show_error("invalid light: " + light, false)
+		case "no_light":
+			if (instance_exists(light_object)) {
+				instance_destroy(light_object)
+			}
+			light_on = false;
+		break;
+		
+	}
+
 
 }
 /*------------------------*/

@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"evil_sword_swing",
+  "%Name":"light_item_test",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"evil_sword_swing",
+  "name":"light_item_test",
   "overriddenProperties":[],
   "parent":{
-    "name":"enemies",
-    "path":"folders/Objects/enemies.yy",
+    "name":"game_objects",
+    "path":"folders/Objects/game_objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"item_test",
+    "path":"objects/item_test/item_test.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -31,12 +34,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"hitbox_sword_swing",
-    "path":"sprites/hitbox_sword_swing/hitbox_sword_swing.yy",
+    "name":"spr_moon_lily",
+    "path":"sprites/spr_moon_lily/spr_moon_lily.yy",
   },
-  "spriteMaskId":{
-    "name":"hitbox_sword_swing",
-    "path":"sprites/hitbox_sword_swing/hitbox_sword_swing.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }
