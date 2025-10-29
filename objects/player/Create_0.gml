@@ -14,7 +14,7 @@ inventory_open = false;
 inventory_UI_object = noone
 
 light = "flashlight"
-light_charge = 100;
+light_charge = 1000;
 light_on = false;
 light_object = noone
 
