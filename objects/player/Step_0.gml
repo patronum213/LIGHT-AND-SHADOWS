@@ -20,10 +20,7 @@ if (!in_dialouge) {
 	if (keyboard_check_pressed(vk_space) and grounded and can_jump) {
 		if (abs(vel_y) < 20) {vel_y -= 20;}
 		motion_state = "jumping";
-	}
-	
-	
-	
+	}	
 }
 /*------------------------*/
 /*       abilities        */
@@ -132,6 +129,24 @@ function parry(dealer) {
 			if (mouse_check_button_pressed(mb_right)) {
 				if !(instance_exists(light_object)) {
 					light_object = instance_create_layer(x, y,"Instances", flashlight_light);
+				}
+				else if (instance_exists(light_object)) {
+					instance_destroy(light_object)
+				}
+				light_on = !light_on
+			};
+			if (light_on) {
+				light_charge -= 1;
+				if (light_charge <= 0) {
+					instance_destroy(light_object);
+					light_on = false;
+				}
+			}
+		break;
+		case "lantern":
+			if (mouse_check_button_pressed(mb_right)) {
+				if !(instance_exists(light_object)) {
+					light_object = instance_create_layer(x, y,"Instances", lantern_light);
 				}
 				else if (instance_exists(light_object)) {
 					instance_destroy(light_object)

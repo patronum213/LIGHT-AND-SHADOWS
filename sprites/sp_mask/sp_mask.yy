@@ -26,7 +26,7 @@
   "origin":0,
   "parent":{
     "name":"light masks",
-    "path":"folders/Sprites/light masks.yy",
+    "path":"folders/Sprites/lights/light masks.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
