@@ -1,0 +1,36 @@
+var points_x = ds_list_create();
+var points_y = ds_list_create();
+
+ds_list_add(points_x, -0.03);
+ds_list_add(points_y, 42.20);
+ds_list_add(points_x, 5.05);
+ds_list_add(points_y, 41.99);
+ds_list_add(points_x, 5.59);
+ds_list_add(points_y, 12.26);
+ds_list_add(points_x, 9.49);
+ds_list_add(points_y, 6.09);
+ds_list_add(points_x, 13.16);
+ds_list_add(points_y, 3.07);
+ds_list_add(points_x, 17.70);
+ds_list_add(points_y, 0.26);
+ds_list_add(points_x, 29.49);
+ds_list_add(points_y, -0.39);
+ds_list_add(points_x, 35.43);
+ds_list_add(points_y, 1.01);
+ds_list_add(points_x, 41.81);
+ds_list_add(points_y, 4.91);
+ds_list_add(points_x, 45.59);
+ds_list_add(points_y, 10.31);
+ds_list_add(points_x, 46.78);
+ds_list_add(points_y, 14.96);
+ds_list_add(points_x, 47);
+ds_list_add(points_y, 41.99);
+ds_list_add(points_x, 53.92);
+ds_list_add(points_y, 42.31);
+ds_list_add(points_x, 54.03);
+ds_list_add(points_y, 54.74);
+ds_list_add(points_x, -0.14);
+ds_list_add(points_y, 54.96);
+
+caster = light_caster_create_from_points(global.system, points_x, points_y);
+light_caster_set_scale(caster, image_xscale, image_yscale);
