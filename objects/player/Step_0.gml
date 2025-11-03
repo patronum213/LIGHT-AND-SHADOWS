@@ -165,6 +165,41 @@ function parry(dealer) {
 				light_charge -= 100;
 			};
 		break;
+		case "glowsticks":
+			
+				
+				if (mouse_check_button_pressed(mb_right) and keyboard_check(vk_shift)) {
+					if (light_charge > 0) {
+						glowsticks_held += 1;
+						light_charge -= 10;
+						if (glowsticks_held == 1) {glowstick_color = make_color_hsv(random_range(0, 255), 200, 255)}
+						else {glowstick_color = make_color_hsv(0, 0, 255)}
+					}
+			}
+			
+			else if (mouse_check_button_pressed(mb_right) and glowsticks_held >= 1) {
+				var vels = multiplied_vector_to_target(x, y, mouse_x, mouse_y, 20)
+				if (glowsticks_held == 1) {
+				instance_create_layer(x, y, "Instances", glowstick_thrown, {vel_x: vels[0], vel_y: vels[1], color: glowstick_color})
+				}
+				else {
+				instance_create_layer(x, y, "Instances", glowstick_thrown, {vel_x: vels[0], vel_y: vels[1], color: make_color_hsv(random_range(0, 255), 200, 255)})
+				}
+				glowsticks_held -= 1
+				if (glowsticks_held == 1) {glowstick_color = make_color_hsv(random_range(0, 255), 200, 255)}
+			};
+			if (glowsticks_held >= 1) {
+				if (!instance_exists(light_object)) {
+				light_object = instance_create_layer(x, y,"Instances", glowsticks_light, {glowsticks: glowsticks_held, color: glowstick_color});
+				}
+				variable_instance_set(light_object, "color", glowstick_color)
+				light_on = true;
+			};
+			else {
+				instance_destroy(light_object)
+				light_on = false;
+				} 
+		break;
 		default:
 			show_error("invalid light: " + light, false)
 		case "no_light":

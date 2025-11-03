@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"check_tilemap",
+  "%Name":"generic_collide",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"check_tilemap",
+  "name":"generic_collide",
   "parent":{
     "name":"collisions",
     "path":"folders/Scripts/collisions.yy",
