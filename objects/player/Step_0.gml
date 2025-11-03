@@ -4,8 +4,6 @@ hspeed = 0;
 vspeed = 0;
 gravity = 0;
 on_wall = false;
-
-
 if (!in_dialouge) {
 /*------------------------*/
 /*     regular motion     */
@@ -160,6 +158,12 @@ function parry(dealer) {
 					light_on = false;
 				}
 			}
+		break;
+		case "flashbeacon":
+			if (mouse_check_button_pressed(mb_right) and light_charge > 0) {
+				light_object = instance_create_layer(x, y,"Instances", flashbeacon_light);
+				light_charge -= 100;
+			};
 		break;
 		default:
 			show_error("invalid light: " + light, false)
