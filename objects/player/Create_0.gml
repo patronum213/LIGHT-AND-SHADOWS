@@ -13,13 +13,16 @@ inventory = ["test_paper", "test_clay", "test_clay"];
 inventory_open = false;
 inventory_UI_object = noone
 
-light = "glowsticks"
+light = "tubelight"
 light_charge = 1000;
 light_on = false;
+
 glowsticks_held = 0;
 glowstick_tick_down = 0;
 glowstick_color = make_color_hsv(0,0,255)
 light_object = noone
+
+tubelight_broken = false;
 
 dev_mode = false;
 

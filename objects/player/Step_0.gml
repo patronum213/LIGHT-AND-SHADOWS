@@ -78,6 +78,11 @@ function parry(dealer) {
 	vel_y += _recoil[1]
 	
 }
+function on_damage(dealer) {
+	if (light == "tubelight") {
+		tubelight_broken = true;
+	};
+};
 //end
 	if (mouse_check_button_pressed(mb_left)) {
 		if (mouse_x < x) { 
@@ -166,8 +171,6 @@ function parry(dealer) {
 			};
 		break;
 		case "glowsticks":
-			
-				
 				if (mouse_check_button_pressed(mb_right) and keyboard_check(vk_shift)) {
 					if (light_charge > 0) {
 						glowsticks_held += 1;
@@ -194,11 +197,42 @@ function parry(dealer) {
 				}
 				variable_instance_set(light_object, "color", glowstick_color)
 				light_on = true;
-			};
+			}
 			else {
 				instance_destroy(light_object)
 				light_on = false;
 				} 
+		break;
+		case "tubelight":
+			if (!tubelight_broken) {
+				if (mouse_check_button_pressed(mb_right)) {
+					if !(instance_exists(light_object)) {
+						light_object = instance_create_layer(x, y,"Instances", tubelight_light);
+					}
+					else if (instance_exists(light_object)) {
+						instance_destroy(light_object)
+					}
+					light_on = !light_on
+				};
+				if (light_on) {
+					light_charge -= 1;
+					if (light_charge <= 0) {
+						instance_destroy(light_object);
+						light_on = false;
+					}
+				}
+			}
+			else {
+				if (instance_exists(light_object)) {
+						instance_destroy(light_object)
+					}
+				if (mouse_check_button_pressed(mb_right)) {
+					var vels = multiplied_vector_to_target(x, y, mouse_x, mouse_y, 20)
+					instance_create_layer(x, y, "Instances", tubelight_thrown, {vel_x: vels[0], vel_y: vels[1]})
+					light = "no_light";
+				}
+			};
+			
 		break;
 		default:
 			show_error("invalid light: " + light, false)

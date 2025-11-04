@@ -1,14 +1,12 @@
 {
   "$GMObject":"",
-  "%Name":"glowsticks_light",
+  "%Name":"tubelight_thrown",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":2,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"glowsticks_light",
+  "name":"tubelight_thrown",
   "overriddenProperties":[],
   "parent":{
     "name":"lights",
@@ -32,10 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
-  "spriteMaskId":{
-    "name":"sp_light",
-    "path":"sprites/sp_light/sp_light.yy",
+  "spriteId":{
+    "name":"test_sprite",
+    "path":"sprites/test_sprite/test_sprite.yy",
   },
+  "spriteMaskId":null,
   "visible":true,
 }

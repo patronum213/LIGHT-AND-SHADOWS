@@ -11,16 +11,14 @@ function do_damage(taker, amount, dealer = id, special = ["none"]) {
 		show_debug_message(taker.damagable);
 		//show_debug_message(variable_instance_get(taker, "my_health"));
 		with (taker) {
-			show_debug_message("pre chance")
-			show_debug_message(my_health)
 			my_health = my_health - amount
-			show_debug_message("post chance")
-			show_debug_message(my_health)
 			iframes = 10;
-			show_debug_message("iframes")
-			show_debug_message(iframes)
 			show_debug_message("hit registered on entity: ")
-			show_debug_message(taker)
+			show_debug_message(id)
+			if (variable_instance_exists(id, "on_damage")) {
+				on_damage(dealer)
+				show_debug_message("called on_damage function")
+				}
 		};
 		//show_debug_message(variable_instance_get(taker, "iframes"))
 		//referces for effects: first item in array should be declairative "effect", 

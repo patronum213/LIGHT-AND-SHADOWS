@@ -1,12 +1,12 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_lantern_light",
-  "bboxMode":2,
+  "%Name":"spr_lantern_light_1",
+  "bboxMode":0,
   "bbox_bottom":448,
   "bbox_left":68,
   "bbox_right":446,
   "bbox_top":70,
-  "collisionKind":2,
+  "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
@@ -21,7 +21,7 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"e5c86d9d-ccc6-4455-a4b0-4a90f9be7fd9","blendMode":0,"displayName":"default","isLocked":false,"name":"e5c86d9d-ccc6-4455-a4b0-4a90f9be7fd9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_lantern_light",
+  "name":"spr_lantern_light_1",
   "nineSlice":null,
   "origin":4,
   "parent":{
@@ -71,7 +71,7 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1f98e51b-f6c9-48c9-aef9-3da67b14253f","path":"sprites/spr_lantern_light/spr_lantern_light.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"1f98e51b-f6c9-48c9-aef9-3da67b14253f","path":"sprites/spr_lantern_light_1/spr_lantern_light_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"ba68bc0e-2c1d-41f7-ade0-7e1706bb4328","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],

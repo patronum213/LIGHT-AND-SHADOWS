@@ -1,6 +1,6 @@
 {
   "$GMObject":"",
-  "%Name":"glowsticks_light",
+  "%Name":"tubelight_light",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
@@ -8,7 +8,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"glowsticks_light",
+  "name":"tubelight_light",
   "overriddenProperties":[],
   "parent":{
     "name":"lights",
@@ -34,8 +34,8 @@
   "solid":false,
   "spriteId":null,
   "spriteMaskId":{
-    "name":"sp_light",
-    "path":"sprites/sp_light/sp_light.yy",
+    "name":"sp_tubelight",
+    "path":"sprites/sp_tubelight/sp_tubelight.yy",
   },
   "visible":true,
 }

@@ -33,8 +33,8 @@
   "solid":false,
   "spriteId":null,
   "spriteMaskId":{
-    "name":"spr_lantern_light",
-    "path":"sprites/spr_lantern_light/spr_lantern_light.yy",
+    "name":"sp_light",
+    "path":"sprites/sp_light/sp_light.yy",
   },
   "visible":true,
 }
