@@ -8,3 +8,5 @@ light = light_create(global.system, sp_light, 1, color, 0.5, 0, true);
 light_set_position(light, x, y);
 image_xscale = 1;
 image_yscale = 1;
+light_wobble_var = 0;
+wobble_intensity = 10;

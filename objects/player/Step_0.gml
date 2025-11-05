@@ -376,27 +376,31 @@ prev_motion_state = motion_state;
 switch (anamation_state)
 {
 	case "jumping":
-		sprite_index = spr_player_jump;
-		if (image_index >= 2) {anamation_state = "vault";}
+		anamation_state = "vault";
 	break;
 	case "vault":
-		sprite_index = spr_player_vault;
+		if (light == "lantern" and light_on) {sprite_index = spr_player_vault_lantern;}
+		else {sprite_index = spr_player_vault;}
 	break;
 	case "fall":
-		sprite_index = spr_player_fall;
+		if (light == "lantern" and light_on) {sprite_index = spr_player_fall_lantern;}
+		else {sprite_index = spr_player_fall;}
 	break;
 	case "dashing":
-		sprite_index = spr_moon_dash;
+		if (light == "lantern" and light_on) {sprite_index = spr_player_fall_lantern;}
+		else {sprite_index = spr_moon_dash;}
 	break;
 	case "walking":
-		sprite_index = spr_player_run;
+		if (light == "lantern" and light_on) {sprite_index = spr_player_run_lantern;}
+		else {sprite_index = spr_player_run;}
 		
 		if (vel_x > 0) {image_xscale = -abs(image_xscale);}
 		else if (vel_x < 0) {image_xscale = abs(image_xscale);}
 	break;
 	case "free":
 	default: 
-		sprite_index = spr_player_idle
+		if (light == "lantern" and light_on) {sprite_index = spr_player_idle_lantern;}
+		else {sprite_index = spr_player_idle}
 		
 }
 }
