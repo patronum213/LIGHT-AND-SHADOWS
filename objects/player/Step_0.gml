@@ -72,10 +72,9 @@ function parry(dealer) {
 	var _recoil = multiplied_vector_to_target(dealer.x,dealer.y, x, y, [30, 50]);
 	}
 	else {var _recoil = multiplied_vector_to_target(dealer.x,dealer.y, x, y, [30, 0]);}
-	show_debug_message(_recoil[0])
-	show_debug_message(_recoil[1])
 	vel_x += _recoil[0]
 	vel_y += _recoil[1]
+	motion_state = "parry";
 	
 }
 function on_damage(dealer) {
@@ -350,6 +349,10 @@ switch (motion_state)
 		if (grounded) {motion_state = "free"}
 		if (vel_y >= 1) {anamation_state = "fall";}
 	break;
+	case "parry":
+		anamation_state = "parry"
+		if (ticks_since_change >= 30) {anamation_state = "free"};
+	break;
 	case "dashing":
 		anamation_state = "dashing"
 		if (abs(vel_x) <= 100) {motion_state = "free";}
@@ -377,6 +380,9 @@ switch (anamation_state)
 {
 	case "jumping":
 		anamation_state = "vault";
+	break;
+	case "parry":
+		sprite_index = spr_player_parry;
 	break;
 	case "vault":
 		if (light == "lantern" and light_on) {sprite_index = spr_player_vault_lantern;}
