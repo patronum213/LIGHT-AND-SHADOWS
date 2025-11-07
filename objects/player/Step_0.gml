@@ -181,14 +181,32 @@ function on_damage(dealer) {
 			
 			else if (mouse_check_button_pressed(mb_right) and glowsticks_held >= 1) {
 				var vels = multiplied_vector_to_target(x, y, mouse_x, mouse_y, 20)
-				if (glowsticks_held == 1) {
-				instance_create_layer(x, y, "Instances", glowstick_thrown, {vel_x: vels[0], vel_y: vels[1], color: glowstick_color})
+				if (keyboard_check(vk_control)) {
+					if (glowsticks_held < 10) {
+					for (var i = 0; i < glowsticks_held; i += 1) {
+						
+						instance_create_layer(x, y, "Instances", glowstick_thrown, {vel_x: vels[0]+random(4), vel_y: vels[1]+random(4), color: make_color_hsv(random_range(0, 255), 200, 255)})
+					}
+					glowsticks_held = 0
+					}
+					else {
+					for (var i = 0; i < 10; i += 1) {
+						instance_create_layer(x, y, "Instances", glowstick_thrown, {vel_x: vels[0]+random(4), vel_y: vels[1]+random(4), color: make_color_hsv(random_range(0, 255), 200, 255)})
+					}
+					glowsticks_held -= 10;
+					if (glowsticks_held == 1) {glowstick_color = make_color_hsv(random_range(0, 255), 200, 255)}
+					}
 				}
 				else {
-				instance_create_layer(x, y, "Instances", glowstick_thrown, {vel_x: vels[0], vel_y: vels[1], color: make_color_hsv(random_range(0, 255), 200, 255)})
+					if (glowsticks_held == 1) {
+					instance_create_layer(x, y, "Instances", glowstick_thrown, {vel_x: vels[0], vel_y: vels[1], color: glowstick_color})
+					}
+					else {
+					instance_create_layer(x, y, "Instances", glowstick_thrown, {vel_x: vels[0], vel_y: vels[1], color: make_color_hsv(random_range(0, 255), 200, 255)})
+					}
+					glowsticks_held -= 1
+					if (glowsticks_held == 1) {glowstick_color = make_color_hsv(random_range(0, 255), 200, 255)}
 				}
-				glowsticks_held -= 1
-				if (glowsticks_held == 1) {glowstick_color = make_color_hsv(random_range(0, 255), 200, 255)}
 			};
 			if (glowsticks_held >= 1) {
 				if (!instance_exists(light_object)) {
