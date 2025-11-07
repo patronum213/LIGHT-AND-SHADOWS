@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"test_sprite",
-    "path":"sprites/test_sprite/test_sprite.yy",
+    "name":"spr_glowstick_thrown",
+    "path":"sprites/spr_glowstick_thrown/spr_glowstick_thrown.yy",
   },
   "spriteMaskId":null,
   "visible":true,

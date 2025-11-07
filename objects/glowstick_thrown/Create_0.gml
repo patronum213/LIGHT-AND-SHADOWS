@@ -14,5 +14,6 @@ friction_clamp_threshhold = 1;
 if !(variable_instance_exists(id, "color")) {color = make_color_hsv(random_range(0, 255), 200, 255)};
 light = light_create(global.system, sp_light, 1, color, 0.5, 0, true);
 light_set_position(light, x, y);
-image_xscale = 1;
-image_yscale = 1;
+image_xscale = 0.8;
+image_yscale = 0.8;
+image_angle = random(360);

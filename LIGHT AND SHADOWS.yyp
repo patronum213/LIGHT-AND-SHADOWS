@@ -159,6 +159,7 @@
     {"id":{"name":"spr_freak_1_idle_no_shield","path":"sprites/spr_freak_1_idle_no_shield/spr_freak_1_idle_no_shield.yy",},},
     {"id":{"name":"spr_freak_1_idle_shield","path":"sprites/spr_freak_1_idle_shield/spr_freak_1_idle_shield.yy",},},
     {"id":{"name":"spr_freak_1_walk_shield","path":"sprites/spr_freak_1_walk_shield/spr_freak_1_walk_shield.yy",},},
+    {"id":{"name":"spr_glowstick_thrown","path":"sprites/spr_glowstick_thrown/spr_glowstick_thrown.yy",},},
     {"id":{"name":"spr_hook","path":"sprites/spr_hook/spr_hook.yy",},},
     {"id":{"name":"spr_lantern_light_1","path":"sprites/spr_lantern_light_1/spr_lantern_light_1.yy",},},
     {"id":{"name":"spr_lantern_light","path":"sprites/spr_lantern_light/spr_lantern_light.yy",},},
