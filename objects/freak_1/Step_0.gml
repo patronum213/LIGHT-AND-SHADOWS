@@ -18,22 +18,24 @@ var motion_vel = 1;//positive as a default
 		unit_state = "attack" 
 	}//lateral targeting
 	 else if (unit_state != "attack") {
-		if (point_distance(x, y, player.x, player.y) < attack_distance) 
-		{vel_x = 0;}
-		else if (x < (player.x-attack_distance)) {
+		if (x < (player.x-attack_distance)) {
 			vel_x = motion_vel; unit_state = "walk"
 		}
 		else if (x > (player.x+attack_distance)) {
 			vel_x = -motion_vel; unit_state = "walk"
-		}	
-		//show_debug_message(x < player.x-attack_distance)
+		}
 	}
+	if (point_distance(x, y, player.x, player.y) < attack_distance) {vel_x = 0;}
 	//gravity
 	if (instance_place(x, y+1, [game_master.collision_tilemap, collides_with_player]) = noone) 
 	{vel_y+=1} else {vel_y=0}
 	
 if (cooldown > 0) {cooldown -=1;}
 
+
+if (my_health <= 100) {shielded = false;} 
+
+show_debug_message(my_health)
 switch (unit_state)
 {
 	case "idle":
@@ -50,7 +52,7 @@ switch (unit_state)
 	break;
 	case "attack":
 		atk_progress += 1;
-		if (atk_progress == 55) {
+		if (atk_progress == 72) {//when to render the hitbox
 			if (player.x < x) {
 				instance_create_layer(x, y, "Instances", freak_1_attack, {owner : id, damage: 10, image_xscale: -1})
 				image_xscale = -abs(image_xscale);
@@ -80,9 +82,12 @@ switch (unit_state)
 			}
 		}
 		else {
-			if (sprite_index != spr_freak_1_walk_no_shield) {
-				sprite_index = spr_freak_1_walk_no_shield
+			if (sprite_index != spr_freak_1_walk_shield) {
+				sprite_index = spr_freak_1_walk_shield
 			}
+			/*if (sprite_index != spr_freak_1_walk_no_shield) {
+				sprite_index = spr_freak_1_walk_no_shield
+			}*/
 		}
 		if (vel_x > 0) {image_xscale = abs(image_xscale);}
 		else if (vel_x < 0) {image_xscale = -abs(image_xscale);}

@@ -30,13 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"hitbox_sword_swing",
-    "path":"sprites/hitbox_sword_swing/hitbox_sword_swing.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":{
-    "name":"hitbox_sword_swing",
-    "path":"sprites/hitbox_sword_swing/hitbox_sword_swing.yy",
+    "name":"hitbox_freak_1_atk",
+    "path":"sprites/hitbox_freak_1_atk/hitbox_freak_1_atk.yy",
   },
   "visible":true,
 }
