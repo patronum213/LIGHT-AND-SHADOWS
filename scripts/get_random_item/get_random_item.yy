@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"is_instance",
+  "%Name":"get_random_item",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"is_instance",
+  "name":"get_random_item",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

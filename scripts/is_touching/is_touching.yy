@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"is_touching",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"collisions",
+    "path":"folders/Scripts/collisions.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
