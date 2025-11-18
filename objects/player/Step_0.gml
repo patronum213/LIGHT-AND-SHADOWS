@@ -404,26 +404,48 @@ switch (anamation_state)
 	break;
 	case "vault":
 		if (light == "lantern" and light_on) {sprite_index = spr_player_vault_lantern;}
+		else if (light == "tubelight") {
+			if (!tubelight_broken) {sprite_index = spr_player_vault_tubelight}
+			else {sprite_index = spr_player_vault_tubelight_broken}
+		}
 		else {sprite_index = spr_player_vault;}
 	break;
 	case "fall":
 		if (light == "lantern" and light_on) {sprite_index = spr_player_fall_lantern;}
+		else if (light == "tubelight") {
+			if (!tubelight_broken) {sprite_index = spr_player_fall_tubelight}
+			else {sprite_index = spr_player_fall_tubelight_broken}
+		}
 		else {sprite_index = spr_player_fall;}
 	break;
 	case "dashing":
-		if (light == "lantern" and light_on) {sprite_index = spr_player_fall_lantern;}
-		else {sprite_index = spr_moon_dash;}
+		
 	break;
 	case "walking":
 		if (light == "lantern" and light_on) {sprite_index = spr_player_run_lantern;}
-		else {sprite_index = spr_player_run;}
+		else if (light == "tubelight" or 
+			light == "flashlight") {
+			sprite_index = spr_player_run_armless
+			if (radtodeg(arctan2((mouse_x-x),(mouse_y-y)))<0) {
+				image_xscale = abs(image_xscale)}
+			else {
+				image_xscale = -abs(image_xscale)}
+		}
+		else {
+			sprite_index = spr_player_run;
+			if (vel_x > 0) {image_xscale = -abs(image_xscale);}
+			else if (vel_x < 0) {image_xscale = -abs(image_xscale)}
+			}
 		
-		if (vel_x > 0) {image_xscale = -abs(image_xscale);}
-		else if (vel_x < 0) {image_xscale = abs(image_xscale);}
+		
 	break;
 	case "free":
 	default: 
 		if (light == "lantern" and light_on) {sprite_index = spr_player_idle_lantern;}
+		else if (light == "tubelight" or
+			light == "flashlight") {
+			sprite_index = spr_player_idle_armless;
+		}
 		else {sprite_index = spr_player_idle}
 		
 }

@@ -51,8 +51,8 @@
   },
   "origin":4,
   "parent":{
-    "name":"lantern",
-    "path":"folders/Sprites/player/lantern.yy",
+    "name":"runs",
+    "path":"folders/Sprites/player/runs.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

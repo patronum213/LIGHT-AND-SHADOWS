@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"lantern",
-    "path":"folders/Sprites/player/lantern.yy",
+    "name":"falls",
+    "path":"folders/Sprites/player/falls.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

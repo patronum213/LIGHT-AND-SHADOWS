@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"lantern",
-    "path":"folders/Sprites/player/lantern.yy",
+    "name":"vault-jumps",
+    "path":"folders/Sprites/player/vault-jumps.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

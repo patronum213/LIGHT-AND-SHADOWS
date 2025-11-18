@@ -35,7 +35,6 @@ if (cooldown > 0) {cooldown -=1;}
 
 if (my_health <= 100) {shielded = false;} 
 
-show_debug_message(my_health)
 switch (unit_state)
 {
 	case "idle":
