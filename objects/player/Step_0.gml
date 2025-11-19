@@ -4,6 +4,7 @@ hspeed = 0;
 vspeed = 0;
 gravity = 0;
 on_wall = false;
+
 if (!in_dialouge) {
 /*------------------------*/
 /*     regular motion     */

@@ -6,19 +6,19 @@ if (player.light == "tubelight" or player.light == "flashlight") {
 	image_alpha = 1;
 	switch (player.sprite_index) {
 	case spr_player_idle_armless: 
-		if (player.image_index == 0) {snap_x = 5; snap_y = 5;}
-		if (player.image_index == 1) {snap_x = 5; snap_y = 5;}
-		if (player.image_index == 2) {snap_x = 5; snap_y = 5;}	
+		if (floor(player.image_index) == 0) {snap_x = 8; snap_y = -28.5;}
+		if (floor(player.image_index) == 1) {snap_x = 8; snap_y = -29;}
+		if (floor(player.image_index) == 2) {snap_x = 8; snap_y = -30;}
 	break;
 	case spr_player_run_armless:
-		if (player.image_index == 0) {snap_x = 5; snap_y = 5;}
-		if (player.image_index == 1) {snap_x = 5; snap_y = 5;}
-		if (player.image_index == 2) {snap_x = 5; snap_y = 5;}
-		if (player.image_index == 3) {snap_x = 5; snap_y = 5;}
-		if (player.image_index == 4) {snap_x = 5; snap_y = 5;}
-		if (player.image_index == 5) {snap_x = 5; snap_y = 5;}
-		if (player.image_index == 6) {snap_x = 5; snap_y = 5;}
-		if (player.image_index == 7) {snap_x = 5; snap_y = 5;}
+		if (floor(player.image_index) == 0) {snap_x = 5; snap_y = 5;}
+		if (floor(player.image_index) == 1) {snap_x = 5; snap_y = 5;}
+		if (floor(player.image_index) == 2) {snap_x = 5; snap_y = 5;}
+		if (floor(player.image_index) == 3) {snap_x = 5; snap_y = 5;}
+		if (floor(player.image_index) == 4) {snap_x = 5; snap_y = 5;}
+		if (floor(player.image_index) == 5) {snap_x = 5; snap_y = 5;}
+		if (floor(player.image_index) == 6) {snap_x = 5; snap_y = 5;}
+		if (floor(player.image_index) == 7) {snap_x = 5; snap_y = 5;}
 	break;
 	default:
 	break;

@@ -12,8 +12,8 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"f0795fc9-0370-4d96-96c9-4eaaffd9034c","name":"f0795fc9-0370-4d96-96c9-4eaaffd9034c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"61317ee5-d2ae-427e-8963-b7622c7f633d","name":"61317ee5-d2ae-427e-8963-b7622c7f633d","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"f0795fc9-0370-4d96-96c9-4eaaffd9034c","name":"f0795fc9-0370-4d96-96c9-4eaaffd9034c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
     {"$GMSpriteFrame":"","%Name":"56f192d7-aa3d-4f94-832c-e7aa919eb2ca","name":"56f192d7-aa3d-4f94-832c-e7aa919eb2ca","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
@@ -73,11 +73,11 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f0795fc9-0370-4d96-96c9-4eaaffd9034c","path":"sprites/spr_player_idle_armless/spr_player_idle_armless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"3ab2491d-b556-4021-b253-e7bcb95118f1","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
-            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"61317ee5-d2ae-427e-8963-b7622c7f633d","path":"sprites/spr_player_idle_armless/spr_player_idle_armless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"797c6ebe-94b0-41a8-9d39-ccc889525014","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+              },"Disabled":false,"id":"797c6ebe-94b0-41a8-9d39-ccc889525014","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"f0795fc9-0370-4d96-96c9-4eaaffd9034c","path":"sprites/spr_player_idle_armless/spr_player_idle_armless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"3ab2491d-b556-4021-b253-e7bcb95118f1","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
                 "0":{"$SpriteFrameKeyframe":"","Id":{"name":"56f192d7-aa3d-4f94-832c-e7aa919eb2ca","path":"sprites/spr_player_idle_armless/spr_player_idle_armless.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"27ceee2a-a36c-4387-b0b6-36c539dab918","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
