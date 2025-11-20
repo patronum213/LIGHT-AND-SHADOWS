@@ -427,16 +427,13 @@ switch (anamation_state)
 		else if (light == "tubelight" or 
 			light == "flashlight") {
 			sprite_index = spr_player_run_armless
-			if (radtodeg(arctan2((mouse_x-x),(mouse_y-y)))<0) {
-				image_xscale = abs(image_xscale)}
-			else {
-				image_xscale = -abs(image_xscale)}
+			
 		}
 		else {
 			sprite_index = spr_player_run;
-			if (vel_x > 0) {image_xscale = -abs(image_xscale);}
-			else if (vel_x < 0) {image_xscale = -abs(image_xscale)}
-			}
+		}
+		if (vel_x > 0) {image_xscale = -abs(image_xscale);}
+		else if (vel_x < 0) {image_xscale = abs(image_xscale)}
 		
 		
 	break;
