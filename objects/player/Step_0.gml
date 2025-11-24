@@ -1,4 +1,3 @@
-//test commits
 //innitalize and correct varibles
 speed = 0;
 hspeed = 0;
