@@ -12,7 +12,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"lights",
-    "path":"folders/Objects/player/lights.yy",
+    "path":"folders/Objects/lights.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,10 +32,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_flashlight_beam",
-    "path":"sprites/spr_flashlight_beam/spr_flashlight_beam.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

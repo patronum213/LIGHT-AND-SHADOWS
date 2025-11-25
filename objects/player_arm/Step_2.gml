@@ -1,10 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (player.light == "tubelight" or 
+if ((player.light == "tubelight" or 
 	player.light == "flashlight" or 
 	player.light == "flashbeacon" or 
 	player.light == "glowsticks" or 
-	player.light == "torch") {
+	player.light == "torch") and 
+	(player.sprite_index == spr_player_idle_armless or
+	player.sprite_index == spr_player_run_armless)
+	) {
 	switch (player.light) {
 	case "tubelight": 
 	if (!player.tubelight_broken) {sprite_index = spr_arm_tubelight}
@@ -48,9 +51,8 @@ if (player.light == "tubelight" or
 	
 	if (player.image_xscale <= 0) {
 		if (
-		//(mouse_angle <= -45 and mouse_angle > -180) or 
-		//(mouse_angle < 180 and mouse_angle > 135)
-		mouse_angle < 0
+		(mouse_angle <= -45 and mouse_angle > -180) or 
+		(mouse_angle < 180 and mouse_angle > 135)
 		) {
 			image_xscale = abs(image_xscale)
 		}
@@ -79,4 +81,3 @@ if (player.light == "tubelight" or
 else {
 	image_alpha = 0;
 };
-show_debug_message(radtodeg(arctan2((mouse_x-x),(mouse_y-y))));

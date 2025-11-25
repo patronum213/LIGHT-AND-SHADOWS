@@ -86,11 +86,13 @@ function on_damage(dealer) {
 //end
 	if (mouse_check_button_pressed(mb_left)) {
 		if (mouse_x < x) { 
+			
 			attack = instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 50, image_xscale : -1});
 		}
 		else {
 			attack = instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 50});
 		}
+		motion_state = "attack";
 		parry_state = 5;
 	};
 	if (mouse_check_button_pressed(mb_right)and array_contains(inventory, "test item")) {
@@ -381,6 +383,13 @@ switch (motion_state)
 		if (abs(vel_x) < 1) {motion_state = "free";}
 		if (abs(vel_y) > 0) {motion_state = "jumping";}
 	break;
+	case "attack":
+		anamation_state = "attack";
+		if (image_index > image_number-1) {
+		anamation_state = "free";
+		motion_state = "free";
+		};
+	break;
 	default:
 	show_debug_message("hit default motion state with case: " + motion_state)
 	case "free":
@@ -449,8 +458,8 @@ switch (anamation_state)
 			sprite_index = spr_player_fall;
 		}
 	break;
-	case "dashing":
-		
+	case "attack":
+		sprite_index = spr_player_attack;
 	break;
 	case "walking":
 		if (light == "lantern" and light_on) {sprite_index = spr_player_run_lantern;}
