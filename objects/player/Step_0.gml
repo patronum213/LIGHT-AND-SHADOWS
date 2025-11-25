@@ -424,14 +424,13 @@ switch (anamation_state)
 	break;
 	case "walking":
 		if (light == "lantern" and light_on) {sprite_index = spr_player_run_lantern;}
-		else if (light == "tubelight" or 
-			light == "flashlight") {
+		else if (
+			light == "tubelight" or
+			light == "flashlight" or
+			light == "flashbeacon") {
 			sprite_index = spr_player_run_armless
-			
 		}
-		else {
-			sprite_index = spr_player_run;
-		}
+		else {sprite_index = spr_player_run;}
 		if (vel_x > 0) {image_xscale = -abs(image_xscale);}
 		else if (vel_x < 0) {image_xscale = abs(image_xscale)}
 		
@@ -440,8 +439,11 @@ switch (anamation_state)
 	case "free":
 	default: 
 		if (light == "lantern" and light_on) {sprite_index = spr_player_idle_lantern;}
-		else if (light == "tubelight" or
-			light == "flashlight") {
+		else if (
+			light == "tubelight" or
+			light == "flashlight" or
+			light == "flashbeacon") 
+		{
 			sprite_index = spr_player_idle_armless;
 		}
 		else {sprite_index = spr_player_idle}

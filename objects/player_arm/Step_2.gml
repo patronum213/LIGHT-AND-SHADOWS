@@ -1,8 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (player.light == "tubelight" or player.light == "flashlight") {
-	if (player.light == "tubelight") {sprite_index = spr_arm_tubelight}
+if (player.light == "tubelight" or 
+	player.light == "flashlight" or 
+	player.light == "flashbeacon") {
+	if (player.light == "tubelight") {sprite_index = spr_arm_flashlight}
 	else if (player.light == "flashlight") {sprite_index = spr_arm_flashlight}
+	else if (player.light == "flashbeacon") {sprite_index = spr_arm_flashbeacon}
 	image_alpha = 1;
 	switch (player.sprite_index) {
 	case spr_player_idle_armless: 
