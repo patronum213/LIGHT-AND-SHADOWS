@@ -5,6 +5,7 @@ vspeed = 0;
 gravity = 0;
 on_wall = false;
 
+
 if (!in_dialouge) {
 /*------------------------*/
 /*     regular motion     */
@@ -296,7 +297,6 @@ if (can_walk) {
 /*------------------------*/
 /*         motion!        */
 /*------------------------*/
-
 {
 //move with pixel-perfect collision checking
 collided_object = move_with_collision(id, x, y, vel_x, vel_y, [game_master.collision_tilemap, collides_with_player]);
@@ -350,9 +350,6 @@ while (remainder_x != 0 or remainder_y != 0) {
 }
 
 }
-
-if (keyboard_check_pressed((ord("T")))) {x = mouse_x; y = mouse_y};//dev hax
-}
 /*------------------------*/
 /*     Motion States      */
 /*------------------------*/
@@ -400,10 +397,21 @@ switch (motion_state)
 }
 prev_motion_state = motion_state;
 }
+
+if (keyboard_check_pressed((ord("T")))) {x = mouse_x; y = mouse_y};//dev hax
+}
 /*------------------------*/
 /*    Anamation States    */
 /*------------------------*/
 {
+	using_armless = 
+	(player.light == "tubelight" or 
+	player.light == "flashlight" or 
+	player.light == "flashbeacon" or  
+	(player.light == "glowsticks" and glowsticks_held > 0) or 
+	player.light == "torch") and 
+	(anamation_state == "free" or
+	anamation_state == "walking")
 switch (anamation_state)
 {
 	case "jumping":
@@ -462,14 +470,9 @@ switch (anamation_state)
 		sprite_index = spr_player_attack;
 	break;
 	case "walking":
-		if (light == "lantern" and light_on) {sprite_index = spr_player_run_lantern;}
-		else if (
-			light == "tubelight" or
-			light == "flashlight" or
-			light == "flashbeacon") {
-			sprite_index = spr_player_run_armless
-		}
-		else {sprite_index = spr_player_run;}
+		if (using_armless) {sprite_index = spr_player_run_armless;}
+		else if (light == "lantern" and light_on) {sprite_index = spr_player_run_lantern;}
+		else {sprite_index = spr_player_run}
 		if (vel_x > 0) {image_xscale = -abs(image_xscale);}
 		else if (vel_x < 0) {image_xscale = abs(image_xscale)}
 		
@@ -477,14 +480,8 @@ switch (anamation_state)
 	break;
 	case "free":
 	default: 
-		if (light == "lantern" and light_on) {sprite_index = spr_player_idle_lantern;}
-		else if (
-			light == "tubelight" or
-			light == "flashlight" or
-			light == "flashbeacon") 
-		{
-			sprite_index = spr_player_idle_armless;
-		}
+		if (using_armless) {sprite_index = spr_player_idle_armless;}
+		else if (light == "lantern" and light_on) {sprite_index = spr_player_idle_lantern;}
 		else {sprite_index = spr_player_idle}
 		
 }

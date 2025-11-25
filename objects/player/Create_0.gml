@@ -7,13 +7,13 @@ anamation_state = "start";
 paused = false;
 
 
-my_health = 100;
+my_health = 10;
 
 inventory = ["test_paper", "test_clay", "test_clay"];
 inventory_open = false;
 inventory_UI_object = noone
 
-light = "flashlight"
+light = "glowsticks"
 light_charge = 1000;
 light_on = false;
 
