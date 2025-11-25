@@ -404,20 +404,50 @@ switch (anamation_state)
 		sprite_index = spr_player_parry;
 	break;
 	case "vault":
-		if (light == "lantern" and light_on) {sprite_index = spr_player_vault_lantern;}
-		else if (light == "tubelight") {
+		switch (light) {
+		case "lantern":
+			if (light_on) {sprite_index = spr_player_vault_lantern}
+			else {sprite_index = spr_player_vault_lantern_off}
+		case "tubelight": 
 			if (!tubelight_broken) {sprite_index = spr_player_vault_tubelight}
 			else {sprite_index = spr_player_vault_tubelight_broken}
+		break;
+		case "flashlight": {sprite_index = spr_player_vault_flashlight} 
+		break;
+		case "flashbeacon": {sprite_index = spr_player_vault_flashbeacon} 
+		break;
+		case "glowsticks": 
+			if (glowsticks_held > 0) {sprite_index = spr_player_vault_glowsticks}
+			else {sprite_index = spr_player_vault}
+		break;
+		case "torch": {sprite_index = spr_player_vault_torch} 
+		break;
+		default:
+			sprite_index = spr_player_vault;
 		}
-		else {sprite_index = spr_player_vault;}
 	break;
 	case "fall":
-		if (light == "lantern" and light_on) {sprite_index = spr_player_fall_lantern;}
-		else if (light == "tubelight") {
+		switch (light) {
+		case "lantern":
+			if (light_on) {sprite_index = spr_player_fall_lantern}
+			else {sprite_index = spr_player_fall_lantern_off}
+		case "tubelight": 
 			if (!tubelight_broken) {sprite_index = spr_player_fall_tubelight}
 			else {sprite_index = spr_player_fall_tubelight_broken}
+		break;
+		case "flashlight": {sprite_index = spr_player_fall_flashlight} 
+		break;
+		case "flashbeacon": {sprite_index = spr_player_fall_flashbeacon} 
+		break;
+		case "glowsticks": 
+			if (glowsticks_held > 0) {sprite_index = spr_player_fall_glowsticks}
+			else {sprite_index = spr_player_fall}
+		break;
+		case "torch": {sprite_index = spr_player_fall_torch} 
+		break;
+		default:
+			sprite_index = spr_player_fall;
 		}
-		else {sprite_index = spr_player_fall;}
 	break;
 	case "dashing":
 		
