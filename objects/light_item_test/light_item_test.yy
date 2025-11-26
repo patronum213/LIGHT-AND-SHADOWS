@@ -13,8 +13,8 @@
     "path":"folders/Objects/game_objects.yy",
   },
   "parentObjectId":{
-    "name":"item_test",
-    "path":"objects/item_test/item_test.yy",
+    "name":"item_parent",
+    "path":"objects/item_parent/item_parent.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

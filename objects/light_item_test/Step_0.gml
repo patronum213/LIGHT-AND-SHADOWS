@@ -3,7 +3,9 @@
 if (distance_to_point(player.x, player.y) <= 200 and 
 	position_meeting(mouse_x, mouse_y, id) and 
 	mouse_check_button_pressed(mb_left)) {
-	array_push(player.inventory, item_id);
+	//array_push(player.inventory, item_id);
+	player.light = item.light_id;
+	player.light_charge += charge;
 	instance_destroy();
 }
 if (position_meeting(mouse_x, mouse_y, id)) {

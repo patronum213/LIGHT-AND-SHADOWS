@@ -53,8 +53,22 @@ else if (Item_Name == "no_item") {
 }
 else {show_error("could not fetch item '" + Item_Name, true)}
 return Item_Data;
-}
+};
 
+function get_light_item_data(Item_Name){
+	show_debug_message("read item data")
+	if (Item_Name == "flashlight") {
+		Item_Data = {name: "Flashlight", light_id: "flashlight", image: spr_paper, tooltip: "fuckass arm mechanics"}
+		}
+	else if (Item_Name == "lantern") {
+		Item_Data = {name: "Lantern", light_id: "lantern", image: spr_clay, tooltip: "wooo pressure"}
+	}
+	else if (Item_Name == "no_item") {
+		Item_Data = {name: "no item", light_id: "no_light", image: spr_terrain_day, tooltip: "something broke"}
+	}
+	else {show_error("could not fetch item '" + Item_Name, true)}
+	return Item_Data;
+};
 
 
 
