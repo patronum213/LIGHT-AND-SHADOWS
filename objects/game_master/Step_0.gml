@@ -16,3 +16,5 @@ camera = {
 
 if (keyboard_check(vk_shift) and keyboard_check_pressed(ord("R"))) {game_restart();}
 else if (keyboard_check_pressed(ord("R"))) {room_restart(); new_room = true;};
+
+if (keyboard_check_pressed(vk_escape)) {global.paused = !global.paused;};

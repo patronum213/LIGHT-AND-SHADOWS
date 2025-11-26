@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-in_dialouge = false;
 
 anamation_state = "start";
 paused = false;

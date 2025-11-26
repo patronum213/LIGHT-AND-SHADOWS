@@ -6,7 +6,7 @@ gravity = 0;
 on_wall = false;
 
 
-if (!in_dialouge) {
+if (!global.paused) {
 /*------------------------*/
 /*     regular motion     */
 /*------------------------*/
@@ -107,24 +107,6 @@ function on_damage(dealer) {
 		else if (_item[1] <= 0) {array_delete(effects, _index, 1)}
 	})
 	if (my_health <= 0) {x = xstart; y = ystart;my_health = max_health;show_debug_message("player died!")};
-}
-/*------------------------*/
-/*       inventory        */
-/*------------------------*/
-{
-	if (keyboard_check_pressed(vk_tab)) {
-		
-		if !(instance_exists(inventory_UI_object)) {
-			inventory_UI_object = instance_create_layer(game_master.camera.x + 80, game_master.camera.y + 80,"UI", UI_inventory, {my_inventory: inventory});
-		}
-		else if (instance_exists(inventory_UI_object)) {
-			instance_destroy(inventory_UI_object, true)
-		}
-		inventory_open = !inventory_open
-		};
-	
-	
-	
 }
 /*------------------------*/
 /*         lights         */
@@ -354,7 +336,7 @@ while (remainder_x != 0 or remainder_y != 0) {
 /*     Motion States      */
 /*------------------------*/
 {
-	if (prev_motion_state == motion_state) {ticks_since_change += 1}
+if (prev_motion_state == motion_state) {ticks_since_change += 1}
 else {ticks_since_change = 0}
 switch (motion_state)
 {
@@ -399,6 +381,25 @@ prev_motion_state = motion_state;
 }
 
 if (keyboard_check_pressed((ord("T")))) {x = mouse_x; y = mouse_y};//dev hax
+}
+/*------------------------*/
+/*       inventory        */
+/*------------------------*/
+{
+	if (keyboard_check_pressed(vk_tab)) {
+		
+		if !(instance_exists(inventory_UI_object)) {
+			inventory_UI_object = instance_create_layer(game_master.camera.x + 80, game_master.camera.y + 80,"UI", UI_inventory, {my_inventory: inventory});
+		}
+		else if (instance_exists(inventory_UI_object)) {
+			instance_destroy(inventory_UI_object, true)
+		}
+		inventory_open = !inventory_open
+		global.paused = inventory_open
+		};
+	
+	
+	
 }
 /*------------------------*/
 /*    Anamation States    */

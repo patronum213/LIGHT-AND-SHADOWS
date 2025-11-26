@@ -7,3 +7,5 @@ width = camera_get_view_width(view_get_camera(0));
 height = camera_get_view_height(view_get_camera(0));
 color = make_color_hsv(0, 0, 0.075 * 255);
 //global.system = light_init(width, height, 1024, color, 1, -1, noone);
+
+global.paused = false;
