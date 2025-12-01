@@ -11,7 +11,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"inventory",
-    "path":"folders/Objects/game_objects/inventory.yy",
+    "path":"folders/Objects/items/inventory.yy",
   },
   "parentObjectId":null,
   "persistent":false,

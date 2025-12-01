@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_paper",
-    "path":"sprites/spr_paper/spr_paper.yy",
+    "name":"spr_item_paper",
+    "path":"sprites/spr_item_paper/spr_item_paper.yy",
   },
   "spriteMaskId":null,
   "visible":true,

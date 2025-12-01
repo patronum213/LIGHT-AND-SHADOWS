@@ -1,5 +1,4 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (!(variable_instance_exists(id, "item_id"))) {item_id = "test_flower"};
-item = get_item_data(item_id)
-my_tooltip = noone
+item_id = "test_clay"
+event_inherited();

@@ -1,16 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"light_item_test",
+  "%Name":"light_item_parent",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"light_item_test",
+  "name":"light_item_parent",
   "overriddenProperties":[],
   "parent":{
-    "name":"game_objects",
-    "path":"folders/Objects/game_objects.yy",
+    "name":"items",
+    "path":"folders/Objects/items.yy",
   },
   "parentObjectId":{
     "name":"item_parent",
@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_moon_lily",
-    "path":"sprites/spr_moon_lily/spr_moon_lily.yy",
+    "name":"spr_item_moon_lily",
+    "path":"sprites/spr_item_moon_lily/spr_item_moon_lily.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,6 +1,39 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function get_item_data(Item_Name){
+
+
+	ini_open("items")
+	Item_Data = {
+		name: ini_read_string(Item_Name, "name", "no_item_name"), 
+		image: asset_get_index(ini_read_string(Item_Name, "image", "test_sprite")), 
+		tooltip: ini_read_string(Item_Name, "tooltip", "no_tooltip")
+	}
+	show_debug_message("read item data")
+	//else {show_error("could not fetch item '" + Item_Name, true)}
+	ini_close()
+	return Item_Data;
+}
+
+function get_light_item_data(Item_Name) {
+	ini_open("lights")
+	Item_Data = {
+		name: ini_read_string(Item_Name, "name", "no_item_name"),
+		image: asset_get_index(ini_read_string(Item_Name, "image", "test_sprite")), 
+		tooltip: ini_read_string(Item_Name, "tooltip", "no_tooltip"),
+		light_id: Item_Name
+	}
+	show_debug_message("read item data")
+	//else {show_error("could not fetch item '" + Item_Name, true)}
+	ini_close()
+	return Item_Data;
+	/*else if (Item_Name == "no_item") {
+		Item_Data = {name: "no item", light_id: "no_light", image: spr_terrain_day, tooltip: "something broke"}
+	}*/
+	//else {show_error("could not fetch item '" + Item_Name, true)}
+};
+
+
 /*
 var Items_File = file_text_open_read(working_directory + "items.txt");
 Item_Data = {};
@@ -38,37 +71,6 @@ Item_Data = {};
 	}
 file_text_close(Items_File);
 */
-show_debug_message("read item data")
-if (Item_Name == "test_paper") {
-	Item_Data = {name: "paper", image: spr_paper, tooltip: "good for writing on"}
-	}
-else if (Item_Name == "test_clay") {
-	Item_Data = {name: "clay", image: spr_clay, tooltip: "it's clay"}
-}
-else if (Item_Name == "test_flower") {
-	Item_Data = {name: "moon flower", image: spr_moon_lily, tooltip: "pretty"}
-}
-else if (Item_Name == "no_item") {
-	Item_Data = {name: "no item", image: spr_terrain_day, tooltip: "something broke"}
-}
-else {show_error("could not fetch item '" + Item_Name, true)}
-return Item_Data;
-};
-
-function get_light_item_data(Item_Name){
-	show_debug_message("read item data")
-	if (Item_Name == "flashlight") {
-		Item_Data = {name: "Flashlight", light_id: "flashlight", image: spr_paper, tooltip: "fuckass arm mechanics"}
-		}
-	else if (Item_Name == "lantern") {
-		Item_Data = {name: "Lantern", light_id: "lantern", image: spr_clay, tooltip: "wooo pressure"}
-	}
-	else if (Item_Name == "no_item") {
-		Item_Data = {name: "no item", light_id: "no_light", image: spr_terrain_day, tooltip: "something broke"}
-	}
-	else {show_error("could not fetch item '" + Item_Name, true)}
-	return Item_Data;
-};
 
 
 

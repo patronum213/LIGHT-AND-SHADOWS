@@ -5,7 +5,6 @@
 anamation_state = "start";
 paused = false;
 
-
 my_health = 10;
 
 inventory = ["test_paper", "test_clay", "test_clay"];
