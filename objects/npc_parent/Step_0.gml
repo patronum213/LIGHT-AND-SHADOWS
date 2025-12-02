@@ -5,8 +5,8 @@ if (
 mouse_check_button(mb_right) and 
 collision_point(mouse_x, mouse_y, id, false, false) and
 (sqrt(power(player.x - x, 2) + power(player.y - y, 2)) < 300) and 
-!player.in_dialouge and !in_dialouge_with_player) {
-	player.in_dialouge = true;
+!player.in_dialogue and !in_dialouge_with_player) {
+	player.in_dialogue = true;
 	in_dialouge_with_player = true; 
 	interaction_progress = 0;
 	
@@ -39,16 +39,25 @@ if (in_dialouge_with_player and keyboard_check_pressed(vk_space)) {
 		else { 
 			layer_text_text(dialogue_text, dialogue[interaction_progress]);
 		}
+		for (var i = 0; i < array_length(do_dialogue_functions); i += 1) {
+			if (is_array(do_dialogue_functions[i])) {
+				
+			}
+			else {
+				switch (do_dialogue_functions, i)
+			}
+		}
+		if (array_contains(do_dialogue_functions, "set_state_moon")) {
+			player.state = "moon"; array_pop(do_dialogue_functions);
+		};
 	}
 	else if (interaction_progress >= array_length(dialogue)-1) {
 	layer_sprite_destroy(dialogue_box);
 	layer_text_destroy(dialogue_text);
-	player.in_dialouge = false;
+	player.in_dialogue = false;
 	in_dialouge_with_player = false;
 	layer_set_visible(game_master.dialogue_layer, false);
 	}
 }
-if (array_contains(do_dialogue_functions, "set_state_moon")) {player.state = "moon"; array_pop(do_dialogue_functions);};
-if (array_contains(do_dialogue_functions, "set_state_sun")) {player.state = "sun"; array_pop(do_dialogue_functions);};
-if (array_contains(do_dialogue_functions, "restore_soul")) {player.soul_amount = 100; array_pop(do_dialogue_functions);};
-if (array_contains(do_dialogue_functions, "restore_body")) {player.integrity = 100; array_pop(do_dialogue_functions);};
+
+

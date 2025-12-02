@@ -108,6 +108,7 @@
     {"id":{"name":"UI_inventory","path":"objects/UI_inventory/UI_inventory.yy",},},
     {"id":{"name":"UI_item_tooltip","path":"objects/UI_item_tooltip/UI_item_tooltip.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"check_collision","path":"scripts/check_collision/check_collision.yy",},},
     {"id":{"name":"check_tilemap","path":"scripts/check_tilemap/check_tilemap.yy",},},
     {"id":{"name":"do_damage","path":"scripts/do_damage/do_damage.yy",},},
@@ -143,6 +144,7 @@
     {"id":{"name":"light_set_sprite","path":"scripts/light_set_sprite/light_set_sprite.yy",},},
     {"id":{"name":"move_with_collision","path":"scripts/move_with_collision/move_with_collision.yy",},},
     {"id":{"name":"shd_blur","path":"shaders/shd_blur/shd_blur.yy",},},
+    {"id":{"name":"background_subway","path":"sprites/background_subway/background_subway.yy",},},
     {"id":{"name":"hitbox_freak_1_atk","path":"sprites/hitbox_freak_1_atk/hitbox_freak_1_atk.yy",},},
     {"id":{"name":"hitbox_sword_swing","path":"sprites/hitbox_sword_swing/hitbox_sword_swing.yy",},},
     {"id":{"name":"sp_light","path":"sprites/sp_light/sp_light.yy",},},
@@ -205,6 +207,7 @@
     {"id":{"name":"spr_sparks","path":"sprites/spr_sparks/spr_sparks.yy",},},
     {"id":{"name":"spr_terrain_day","path":"sprites/spr_terrain_day/spr_terrain_day.yy",},},
     {"id":{"name":"spr_terrain_night","path":"sprites/spr_terrain_night/spr_terrain_night.yy",},},
+    {"id":{"name":"spr_tubelight_thrown","path":"sprites/spr_tubelight_thrown/spr_tubelight_thrown.yy",},},
     {"id":{"name":"Sprite21","path":"sprites/Sprite21/Sprite21.yy",},},
     {"id":{"name":"test_sprite","path":"sprites/test_sprite/test_sprite.yy",},},
     {"id":{"name":"test_tileset","path":"sprites/test_tileset/test_tileset.yy",},},
@@ -215,6 +218,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

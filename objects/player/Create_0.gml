@@ -4,6 +4,7 @@
 
 anamation_state = "start";
 paused = false;
+in_dialogue = false;
 
 my_health = 10;
 

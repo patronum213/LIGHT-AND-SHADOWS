@@ -5,8 +5,7 @@ vspeed = 0;
 gravity = 0;
 on_wall = false;
 
-
-if (!global.paused) {
+if (!global.paused or in_dialouge) {
 /*------------------------*/
 /*     regular motion     */
 /*------------------------*/
@@ -382,6 +381,7 @@ prev_motion_state = motion_state;
 
 if (keyboard_check_pressed((ord("T")))) {x = mouse_x; y = mouse_y};//dev hax
 }
+	
 /*------------------------*/
 /*       inventory        */
 /*------------------------*/
@@ -396,10 +396,7 @@ if (keyboard_check_pressed((ord("T")))) {x = mouse_x; y = mouse_y};//dev hax
 		}
 		inventory_open = !inventory_open
 		global.paused = inventory_open
-		};
-	
-	
-	
+		};	
 }
 /*------------------------*/
 /*    Anamation States    */
