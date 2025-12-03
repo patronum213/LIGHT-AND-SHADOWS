@@ -3,6 +3,7 @@
 decoration_layer = layer_get_id("Decoration")
 placement_interval = 250;
 billboard_streak = 0;
+randomise();
 for (x = placement_interval; x + placement_interval < room_width; x += placement_interval) {
 	if (billboard_streak >= 2) {
 		var object_choice = choose(

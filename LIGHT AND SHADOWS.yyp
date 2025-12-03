@@ -106,6 +106,7 @@
     {"id":{"name":"ScaleLight","path":"objects/ScaleLight/ScaleLight.yy",},},
     {"id":{"name":"starting_pos","path":"objects/starting_pos/starting_pos.yy",},},
     {"id":{"name":"sword_swing","path":"objects/sword_swing/sword_swing.yy",},},
+    {"id":{"name":"terrain_generator","path":"objects/terrain_generator/terrain_generator.yy",},},
     {"id":{"name":"test_object","path":"objects/test_object/test_object.yy",},},
     {"id":{"name":"tubelight_light","path":"objects/tubelight_light/tubelight_light.yy",},},
     {"id":{"name":"tubelight_thrown","path":"objects/tubelight_thrown/tubelight_thrown.yy",},},
