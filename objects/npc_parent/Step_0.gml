@@ -39,14 +39,14 @@ if (in_dialouge_with_player and keyboard_check_pressed(vk_space)) {
 		else { 
 			layer_text_text(dialogue_text, dialogue[interaction_progress]);
 		}
-		for (var i = 0; i < array_length(do_dialogue_functions); i += 1) {
+		/*for (var i = 0; i < array_length(do_dialogue_functions); i += 1) {
 			if (is_array(do_dialogue_functions[i])) {
 				
 			}
 			else {
 				switch (do_dialogue_functions, i)
 			}
-		}
+		}*/
 		if (array_contains(do_dialogue_functions, "set_state_moon")) {
 			player.state = "moon"; array_pop(do_dialogue_functions);
 		};
