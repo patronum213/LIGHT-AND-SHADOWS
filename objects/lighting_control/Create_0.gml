@@ -2,8 +2,8 @@
 var width, height, color;
 randomize();
 
-max_brightness_pct = 0.5//0.03125;
-min_brightness_pct = 0.5//0.005;
+max_brightness_pct = 0.03125;
+min_brightness_pct = 0.005;
 acclimation_time = 1000;
 
 width = camera_get_view_width(view_get_camera(0));

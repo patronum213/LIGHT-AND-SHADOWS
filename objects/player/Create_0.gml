@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+testing_light_index_number = 1;
 
 anamation_state = "start";
 paused = false;
@@ -22,6 +23,8 @@ glowstick_color = make_color_hsv(0,0,255)
 light_object = noone
 
 tubelight_broken = false;
+
+sign_color = "red";
 
 dev_mode = false;
 
@@ -85,3 +88,5 @@ parry_state = 0;
 parry_cooldown = 0;
 
 darkness_acclimation = 0;
+
+
