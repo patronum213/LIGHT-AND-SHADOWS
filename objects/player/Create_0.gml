@@ -12,8 +12,8 @@ inventory = ["test_paper", "test_clay", "test_clay"];
 inventory_open = false;
 inventory_UI_object = noone
 
-light = "glowsticks"
-light_charge = 1000;
+light = "lantern"
+light_charge = 5000;
 light_on = false;
 
 glowsticks_held = 0;
@@ -83,3 +83,5 @@ damagable = true;
 parry_state = 0;
 
 parry_cooldown = 0;
+
+darkness_acclimation = 0;

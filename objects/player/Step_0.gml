@@ -152,6 +152,7 @@ function on_damage(dealer) {
 			if (mouse_check_button_pressed(mb_right) and light_charge > 0) {
 				light_object = instance_create_layer(x, y,"Instances", flashbeacon_light);
 				light_charge -= 100;
+				darkness_acclimation = 0;
 			};
 		break;
 		case "glowsticks":
@@ -246,6 +247,11 @@ function on_damage(dealer) {
 		break;
 		
 	}
+
+//
+if (!light_on) {darkness_acclimation += 1}
+else {darkness_acclimation = 0};
+
 
 
 }
