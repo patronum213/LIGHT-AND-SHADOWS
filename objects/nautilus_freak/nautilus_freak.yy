@@ -38,8 +38,8 @@
     "path":"sprites/spr_freak_1_idle_shield/spr_freak_1_idle_shield.yy",
   },
   "spriteMaskId":{
-    "name":"spr_freak_1_idle_shield",
-    "path":"sprites/spr_freak_1_idle_shield/spr_freak_1_idle_shield.yy",
+    "name":"spr_freak_naut_idle",
+    "path":"sprites/spr_freak_naut_idle/spr_freak_naut_idle.yy",
   },
   "visible":true,
 }

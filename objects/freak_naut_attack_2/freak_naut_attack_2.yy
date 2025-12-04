@@ -1,18 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"freak_naut_attack",
+  "%Name":"freak_naut_attack_2",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"freak_naut_attack",
+  "name":"freak_naut_attack_2",
   "overriddenProperties":[],
   "parent":{
     "name":"freak_naut",
     "path":"folders/Objects/enemies/freak_naut.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"freak_attack_parent",
+    "path":"objects/freak_attack_parent/freak_attack_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +33,13 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"hitbox_naut_attack_basic_2",
+    "path":"sprites/hitbox_naut_attack_basic_2/hitbox_naut_attack_basic_2.yy",
+  },
   "spriteMaskId":{
-    "name":"hitbox_freak_1_atk",
-    "path":"sprites/hitbox_freak_1_atk/hitbox_freak_1_atk.yy",
+    "name":"hitbox_naut_attack_basic_1",
+    "path":"sprites/hitbox_naut_attack_basic_1/hitbox_naut_attack_basic_1.yy",
   },
   "visible":true,
 }

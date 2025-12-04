@@ -9,7 +9,7 @@ image_xscale = 0.1;
 image_yscale = 0.1;
 
 item_holding = "no_item";
-flee_angle = random(360)
+flee_vels = [];
 light_object = noone;
 
 

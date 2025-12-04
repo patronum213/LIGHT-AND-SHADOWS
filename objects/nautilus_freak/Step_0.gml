@@ -35,19 +35,22 @@ if (item_holding == "no_item") {
 	abs(x - player.x) <= attack_distance_x and
 	abs(y - player.y) <= attack_distance_y
 	) {
-		cooldown = 100;
+		
 		if (choose(1,2) == 1) {
 			unit_state = "grab_attack" 
+			cooldown = 280;
 		}
-		else {unit_state = "basic_attack"}
+		else {
+			unit_state = "basic_attack"
+			cooldown = 280;
+		}
 	}
 
 	if (cooldown > 0) {cooldown -=1;}
 }
 else {
-	var flee_values = [cos(flee_angle), sin(flee_angle)];
-	vel_x = motion_vel*flee_values[0]*2;
-	vel_y = motion_vel*flee_values[1]*2;
+	vel_x = flee_vels[0];
+	vel_y = flee_vels[1];
 	unit_state = "walk";
 	if !(instance_exists(light_object)) {
 		light_object = instance_create_layer(x, y,"Instances", naut_item_light, {owner: id});
@@ -56,46 +59,55 @@ else {
 if (my_health <= 0 and item_holding != "no_item") {
 	instance_create_layer(x, y, "Instances", item_template, {item_id: item_holding});
 }
-
 switch (unit_state)
 {
 	case "basic_attack":
-		sprite_index = spr_freak_1_atk_shield
+		sprite_index = spr_freak_naut_attack_basic
 		atk_progress += 1;
-		if (atk_progress == 72) {//when to render the hitbox
+		if (atk_progress == 44) {//when to render the hitbox
 			if (player.x < x) {
-				instance_create_layer(x, y, "Instances", freak_naut_attack, {owner : id, damage: 10, image_xscale: -1})
-				image_xscale = -abs(image_xscale);
-			} else {
-				instance_create_layer(x, y, "Instances", freak_naut_attack, {owner : id, damage: 10})
 				image_xscale = abs(image_xscale);
+				instance_create_layer(x, y, "Instances", freak_naut_attack_1, {owner : id, damage: 10})
+			} else {
+				image_xscale = -abs(image_xscale);
+				instance_create_layer(x, y, "Instances", freak_naut_attack_1, {owner : id, damage: 10})
+			}
+		}
+		else if (atk_progress == 47) {//when to render the hitbox
+			if (player.x < x) {
+				image_xscale = abs(image_xscale);
+				instance_create_layer(x, y, "Instances", freak_naut_attack_2, {owner : id, damage: 10})
+			} else {
+				image_xscale = -abs(image_xscale);
+				instance_create_layer(x, y, "Instances", freak_naut_attack_2, {owner : id, damage: 10})
 			}
 		}
 		if (image_index >= image_number-1) {unit_state = "free"; atk_progress = 0;}
 	break;
 	case "grab_attack":
-		sprite_index = spr_freak_1_atk_shield
+		sprite_index = spr_freak_naut_attack_grab
 		atk_progress += 1;
-		if (atk_progress == 72) {//when to render the hitbox
+		if (atk_progress == 80) {//when to render the hitbox
+			flee_vels = multiplied_vector_to_target(x, y, player.x, player.y, motion_vel*-2);
 			if (player.x < x) {
-				instance_create_layer(x, y, "Instances", freak_naut_attack_grab, {owner : id, damage: 10, image_xscale: -1})
-				image_xscale = -abs(image_xscale);
-			} else {
-				instance_create_layer(x, y, "Instances", freak_naut_attack_grab, {owner : id, damage: 10})
 				image_xscale = abs(image_xscale);
+				instance_create_layer(x, y, "Instances", freak_naut_attack_grab, {owner : id, damage: 10})
+			} else {
+				image_xscale = -abs(image_xscale);
+				instance_create_layer(x, y, "Instances", freak_naut_attack_grab, {owner : id, damage: 10})
 			}
 		}
 		if (image_index >= image_number-1) {unit_state = "free"; atk_progress = 0;}
 	break;
 	
 	case "walk":
-		sprite_index = spr_freak_1_walk_shield
-		if (vel_x > 0) {image_xscale = abs(image_xscale);}
-		else if (vel_x < 0) {image_xscale = -abs(image_xscale);}
+		sprite_index = spr_freak_naut_idle
+		if (vel_x > 0) {image_xscale = -abs(image_xscale);}
+		else if (vel_x < 0) {image_xscale = abs(image_xscale);}
 	break;
 	case "free":
 	default: 
-		sprite_index = spr_freak_1_idle_shield
+		sprite_index = spr_freak_naut_idle
 		
 }
 event_inherited();

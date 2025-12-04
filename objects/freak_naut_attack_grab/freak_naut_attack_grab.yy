@@ -12,7 +12,10 @@
     "name":"freak_naut",
     "path":"folders/Objects/enemies/freak_naut.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"freak_attack_parent",
+    "path":"objects/freak_attack_parent/freak_attack_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +33,13 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"hitbox_naut_attack_grab",
+    "path":"sprites/hitbox_naut_attack_grab/hitbox_naut_attack_grab.yy",
+  },
   "spriteMaskId":{
-    "name":"hitbox_freak_1_atk",
-    "path":"sprites/hitbox_freak_1_atk/hitbox_freak_1_atk.yy",
+    "name":"hitbox_naut_attack_grab",
+    "path":"sprites/hitbox_naut_attack_grab/hitbox_naut_attack_grab.yy",
   },
   "visible":true,
 }
