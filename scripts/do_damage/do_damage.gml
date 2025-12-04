@@ -53,7 +53,9 @@ function do_damage(taker, amount, dealer = id, special = ["none"]) {
 						var picked_item = irandom(array_length(player.inventory)-1)
 						item_grabbed = player.inventory[picked_item]
 						array_delete(player.inventory, picked_item, 1);
-						
+					}
+					with (temp_dealer) {
+						item_holding = item_grabbed
 					}
 				break;
 				

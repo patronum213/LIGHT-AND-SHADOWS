@@ -29,11 +29,11 @@ if (item_holding == "no_item") {
 	}
 	else {vel_y = 0;}
 
-	
+
 	//attacking when able
 	if (cooldown <= 0 and unit_state != "attack" and
-	abs(x - player.x) < attack_distance_x and
-	abs(y - player.y) < attack_distance_y
+	abs(x - player.x) <= attack_distance_x and
+	abs(y - player.y) <= attack_distance_y
 	) {
 		cooldown = 100;
 		if (choose(1,2) == 1) {
@@ -46,11 +46,11 @@ if (item_holding == "no_item") {
 }
 else {
 	var flee_values = [cos(flee_angle), sin(flee_angle)];
-	vel_x = motion_vel*flee_values[0];
-	vel_y = motion_vel*flee_values[1];
-	
+	vel_x = motion_vel*flee_values[0]*2;
+	vel_y = motion_vel*flee_values[1]*2;
+	unit_state = "walk";
 	if !(instance_exists(light_object)) {
-		light_object = instance_create_layer(x, y,"Instances", naut_item_light);
+		light_object = instance_create_layer(x, y,"Instances", naut_item_light, {owner: id});
 	}
 }
 if (my_health <= 0 and item_holding != "no_item") {

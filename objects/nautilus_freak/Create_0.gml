@@ -10,6 +10,7 @@ image_yscale = 0.1;
 
 item_holding = "no_item";
 flee_angle = random(360)
+light_object = noone;
 
 
 event_inherited();
