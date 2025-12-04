@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"item_test",
+  "%Name":"freak_naut_attack",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"item_test",
+  "name":"freak_naut_attack",
   "overriddenProperties":[],
   "parent":{
-    "name":"items",
-    "path":"folders/Objects/items.yy",
+    "name":"freak_naut",
+    "path":"folders/Objects/enemies/freak_naut.yy",
   },
-  "parentObjectId":{
-    "name":"item_parent",
-    "path":"objects/item_parent/item_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,10 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_item_moon_lily",
-    "path":"sprites/spr_item_moon_lily/spr_item_moon_lily.yy",
+  "spriteId":null,
+  "spriteMaskId":{
+    "name":"hitbox_freak_1_atk",
+    "path":"sprites/hitbox_freak_1_atk/hitbox_freak_1_atk.yy",
   },
-  "spriteMaskId":null,
   "visible":true,
 }

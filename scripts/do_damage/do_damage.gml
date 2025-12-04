@@ -47,6 +47,16 @@ function do_damage(taker, amount, dealer = id, special = ["none"]) {
 					vel_y += vector[1]
 					}
 				break;
+				case "grab":
+					var item_grabbed = "";
+					with (temp_taker) {
+						var picked_item = irandom(array_length(player.inventory-1))
+						item_grabbed = player.inventory[picked_item]
+						array_delete(player.inventory, picked_item, 1);
+						
+					}
+				break;
+				
 				default:
 				show_debug_message("unknown damage special type: " + _item)
 				break;
