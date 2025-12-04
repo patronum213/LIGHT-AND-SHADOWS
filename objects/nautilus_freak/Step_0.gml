@@ -1,8 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-event_inherited();
-
-
 ///////////// v Melee AI v /////////////
 /*required Create varibles:
 cooldown = 0;
@@ -53,7 +50,9 @@ else {
 		light_object = instance_create_layer(x, y,"Instances", naut_item_light);
 	}
 }
-
+if (my_health <= 0 and item_holding != "no_item") {
+	instance_create_layer(x, y, "Instances", item_template, {item_id: item_holding});
+}
 
 switch (unit_state)
 {
@@ -96,3 +95,4 @@ switch (unit_state)
 		sprite_index = spr_freak_1_idle_shield
 		
 }
+event_inherited();

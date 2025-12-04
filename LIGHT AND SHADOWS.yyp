@@ -94,7 +94,7 @@
     {"id":{"name":"Gravestone","path":"objects/Gravestone/Gravestone.yy",},},
     {"id":{"name":"hover_test","path":"objects/hover_test/hover_test.yy",},},
     {"id":{"name":"item_parent","path":"objects/item_parent/item_parent.yy",},},
-    {"id":{"name":"item","path":"objects/item/item.yy",},},
+    {"id":{"name":"item_template","path":"objects/item_template/item_template.yy",},},
     {"id":{"name":"lantern_light","path":"objects/lantern_light/lantern_light.yy",},},
     {"id":{"name":"light_item_parent","path":"objects/light_item_parent/light_item_parent.yy",},},
     {"id":{"name":"Light","path":"objects/Light/Light.yy",},},
