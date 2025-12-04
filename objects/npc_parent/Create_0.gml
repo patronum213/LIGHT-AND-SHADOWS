@@ -7,3 +7,4 @@
 dialogue = [
 "generic dialogue"]
 do_dialogue_functions = [];
+in_dialogue_with_player = false;

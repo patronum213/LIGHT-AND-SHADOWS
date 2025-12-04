@@ -5,7 +5,7 @@ vspeed = 0;
 gravity = 0;
 on_wall = false;
 
-if (!global.paused or in_dialouge) {
+if (!global.paused or in_dialogue ) {
 /*------------------------*/
 /*     regular motion     */
 /*------------------------*/

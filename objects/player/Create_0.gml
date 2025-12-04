@@ -8,11 +8,11 @@ in_dialogue = false;
 
 my_health = 10;
 
-inventory = ["test_paper", "test_clay", "test_clay"];
+inventory = ["test_paper", "test_flower", "test_flower"];
 inventory_open = false;
 inventory_UI_object = noone
 
-light = "lantern"
+light = "glowsticks"
 light_charge = 5000;
 light_on = false;
 
