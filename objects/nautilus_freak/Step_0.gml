@@ -31,7 +31,10 @@ if (item_holding == "no_item") {
 
 	
 	//attacking when able
-	if (point_distance(x, y, player.x, player.y) <= attack_distance and cooldown <= 0 and unit_state != "attack") {
+	if (cooldown <= 0 and unit_state != "attack" and
+	abs(x - player.x) < attack_distance_x and
+	abs(y - player.y) < attack_distance_y
+	) {
 		cooldown = 100;
 		if (choose(1,2) == 1) {
 			unit_state = "grab_attack" 
