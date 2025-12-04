@@ -5,9 +5,9 @@ if (
 mouse_check_button(mb_right) and 
 collision_point(mouse_x, mouse_y, id, false, false) and
 (sqrt(power(player.x - x, 2) + power(player.y - y, 2)) < 300) and 
-!player.in_dialogue and !in_dialouge_with_player) {
+!player.in_dialogue and !in_dialogue_with_player) {
 	player.in_dialogue = true;
-	in_dialouge_with_player = true; 
+	in_dialogue_with_player = true; 
 	interaction_progress = 0;
 	
 	dialogue_text = layer_text_create(game_master.dialogue_layer, game_master.camera.x + text_x, game_master.camera.y + text_y, Font_1, dialogue[interaction_progress]);
@@ -29,7 +29,7 @@ collision_point(mouse_x, mouse_y, id, false, false) and
 			layer_text_text(dialogue_text, dialogue[interaction_progress]);
 		}
 }
-if (in_dialouge_with_player and keyboard_check_pressed(vk_space)) {
+if (in_dialogue_with_player and keyboard_check_pressed(vk_space)) {
 	if (interaction_progress < array_length(dialogue)-1) {
 		interaction_progress += 1;
 		if (is_array(dialogue[interaction_progress])) {
@@ -55,7 +55,7 @@ if (in_dialouge_with_player and keyboard_check_pressed(vk_space)) {
 	layer_sprite_destroy(dialogue_box);
 	layer_text_destroy(dialogue_text);
 	player.in_dialogue = false;
-	in_dialouge_with_player = false;
+	in_dialogue_with_player = false;
 	layer_set_visible(game_master.dialogue_layer, false);
 	}
 }
