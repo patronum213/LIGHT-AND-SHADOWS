@@ -1,8 +1,11 @@
 function move_with_collision(_id, x, y, vel_x, vel_y, colliding_objects = [all], colliding_blacklist = [], remainder_x = "remainder_x", remainder_y = "remainder_y") {
-//remainder varibles default to remainder_x and  remainder_y for collection
+// remainder varibles default to remainder_x and  remainder_y for collection
 // The section below handles pixel-perfect collision checking.
 // It does collision checking twice, first on the X axis, and then on the Y axis.
 // On each axis, it moves the character pixel-by-pixel until its velocity for that axis is covered, or a collision is found.
+// this is a bandaid fix, but it will do for now.
+var collided_object_x = noone;
+var collided_object_y = noone;
 // 'move_count' is how many total pixels the character needs to move this frame. It is the absolute value of the velocity on an axis.
 // 'move_once' is the amount of pixels it needs to move once, before checking for a collision. It is 1, 0, or -1.
 var _move_count = abs(vel_x);
@@ -38,8 +41,9 @@ repeat (_move_count)
 		if (collided_object != noone and !array_contains(colliding_blacklist, collided_object))
 		{	
 			variable_instance_set(_id, remainder_x, _move_count_remaining);
-			variable_instance_set(_id, remainder_y, vel_y);
-			return collided_object;
+			//variable_instance_set(_id, remainder_y, vel_y);
+			collided_object_x = collided_object;
+			break;
 		}
 		else {
 			// In that case, move_once is added to the X coordinate of the character.
@@ -54,7 +58,6 @@ repeat (_move_count)
 		_move_count_remaining -= sign(_move_count_remaining);
 	}	
 };
-variable_instance_set(_id, remainder_x, 0);
 // We now repeat all of the previous steps to check for collisions on the Y axis.
 // Everything is the same, but vel_x is replaced by vel_y, and the check_collision function takes a Y value (its second argument).
 var _move_count = abs(vel_y);
@@ -91,7 +94,8 @@ repeat (_move_count)
 		if (collided_object != noone and !array_contains(colliding_blacklist, collided_object))
 		{	
 			variable_instance_set(_id, remainder_y, _move_count_remaining);
-			return collided_object;
+			collided_object_y = collided_object;
+			break;
 		}
 		else {
 			// In that case, move_once is added to the X coordinate of the character.
@@ -106,5 +110,21 @@ repeat (_move_count)
 		_move_count_remaining -= sign(_move_count_remaining);
 	}
 };
-variable_instance_set(_id, remainder_y, 0);
+if (collided_object_y == noone and collided_object_x == noone) {
+	
+}
+else {
+	if (collided_object_y != noone) {
+		return collided_object_y;
+	}
+	else {
+		variable_instance_set(_id, remainder_y, 0);
+	}
+	if (collided_object_x != noone) {
+		return collided_object_x;
+	}
+	else {
+		variable_instance_set(_id, remainder_x, 0);
+	}
+}
 };
