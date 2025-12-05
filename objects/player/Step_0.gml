@@ -12,12 +12,12 @@ if (!global.paused or in_dialogue ) {
 {
 	pinput_x = 0;
 	//first get the horizontal velocity the player is trying to achieve
-	if (keyboard_check(vk_left)) {pinput_x -= 5;};
-	if (keyboard_check(vk_right)) {pinput_x += 5;};
+	if (keyboard_check(vk_left)) {pinput_x -= walkspeed*walkspeed_mult;};
+	if (keyboard_check(vk_right)) {pinput_x += walkspeed*walkspeed_mult;};
 	if ((keyboard_check(vk_right) or keyboard_check(vk_left)) and grounded) {motion_state = "walking";}
 	//jumps are checked seporately
 	if (keyboard_check_pressed(vk_space) and grounded and can_jump) {
-		if (abs(vel_y) < 20) {vel_y -= 20;}
+		if (abs(vel_y) < jumpforce*jumpforce_mult) {vel_y -= jumpforce*jumpforce_mult;}
 		motion_state = "jumping";
 	}	
 }
@@ -238,9 +238,27 @@ function on_damage(dealer) {
 			
 		break;
 		case "neonsign":
-			if (mouse_check_button_pressed(mb_right)) {
+			if (mouse_check_button_pressed(mb_right) and keyboard_check(vk_shift)) {
+				instance_destroy(light_object)
+				if (sign_color == "red") {//damage
+					sign_color = "blue"; 
+				}
+				else if (sign_color == "blue") {//jump
+					sign_color = "yellow"; 
+				}
+				else if (sign_color == "yellow") {//dash
+					sign_color = "green"; 
+				}
+				else if (sign_color == "green") {
+					sign_color = "red"; 
+				}
+				light_object = instance_create_layer(x, y,"Instances", neonsign_light, {color: sign_color});
+				light_on = true;
+		
+			}
+			else if (mouse_check_button_pressed(mb_right)) {
 				if !(instance_exists(light_object)) {
-					light_object = instance_create_layer(x, y,"Instances", lantern_light);
+					light_object = instance_create_layer(x, y,"Instances", neonsign_light, {color: sign_color});
 				}
 				else if (instance_exists(light_object)) {
 					instance_destroy(light_object)
@@ -253,6 +271,37 @@ function on_damage(dealer) {
 					instance_destroy(light_object);
 					light_on = false;
 				}
+				if (sign_color == "red") {//damage
+					damage_mult = 1.5;
+					jumpforce_mult = 1;
+					grav_mult = 1;
+					walkspeed_mult = 1;
+				}
+				else if (sign_color == "blue") {//jump
+					damage_mult = 1;
+					jumpforce_mult = 1;
+					grav_mult = 0.5;
+					walkspeed_mult = 1;
+				}
+				else if (sign_color == "yellow") {//dash
+					damage_mult = 1;
+					jumpforce_mult = 1;
+					grav_mult = 1;
+					walkspeed_mult = 1.5;
+				}
+				else if (sign_color == "green") {//healing
+					damage_mult = 1;
+					jumpforce_mult = 1;
+					grav_mult = 1;
+					walkspeed_mult = 1;
+					my_health += 1;
+				}
+			}
+			else {
+				damage_mult = 1;
+				jumpforce_mult = 1;
+				grav_mult = 1;
+				walkspeed_mult = 1;
 			}
 		break;
 		
@@ -285,7 +334,7 @@ if (grounded) {_grav = 0}
 else if (motion_state  == "dashing") {_grav = 0; vel_y = 0;}
 else {_grav = 1}
 
-_grav *= grav_direction
+_grav *= grav_mult
 
 vel_y += _grav;
 

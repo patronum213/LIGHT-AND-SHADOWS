@@ -105,6 +105,7 @@
     {"id":{"name":"lore_object_parent","path":"objects/lore_object_parent/lore_object_parent.yy",},},
     {"id":{"name":"naut_item_light","path":"objects/naut_item_light/naut_item_light.yy",},},
     {"id":{"name":"nautilus_freak","path":"objects/nautilus_freak/nautilus_freak.yy",},},
+    {"id":{"name":"neonsign_light","path":"objects/neonsign_light/neonsign_light.yy",},},
     {"id":{"name":"npc_parent","path":"objects/npc_parent/npc_parent.yy",},},
     {"id":{"name":"parry_sparks","path":"objects/parry_sparks/parry_sparks.yy",},},
     {"id":{"name":"player_arm","path":"objects/player_arm/player_arm.yy",},},

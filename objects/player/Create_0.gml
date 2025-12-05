@@ -13,7 +13,7 @@ inventory = ["test_paper", "test_flower", "test_flower"];
 inventory_open = false;
 inventory_UI_object = noone
 
-light = "lantern"
+light = "neonsign"
 light_charge = 5000;
 light_on = false;
 
@@ -44,6 +44,9 @@ bomb_cooldown = 0;
 
 
 
+
+
+
 //physics properties
 vel_x = 0;
 vel_y = 0;
@@ -60,7 +63,8 @@ ticks_since_change = 0;
 can_walk = true;
 can_jump = true;
 
-walkspeed_mult = 1;
+walkspeed = 5;
+jumpforce = 20;
 
 //temp var initalizations
 on_wall = false;
@@ -70,6 +74,13 @@ flying = false;
 remainder_x = 0;
 remainder_y = 0;
 
+
+
+///multipliers
+walkspeed_mult = 1;
+jumpforce_mult = 1;
+damage_mult = 1;
+grav_mult = 1;
 
 keyboard_set_map(ord("A"), vk_left);
 keyboard_set_map(ord("D"), vk_right);
