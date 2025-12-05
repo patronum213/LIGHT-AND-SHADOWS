@@ -510,6 +510,14 @@ switch (anamation_state)
 			if (glowsticks_held > 0) {sprite_index = spr_player_vault_glowsticks}
 			else {sprite_index = spr_player_vault}
 		break;
+		case "neonsign": 
+			switch (sign_color) {
+				case "red": sprite_index = spr_player_vault_neonsign_red; break;
+				case "blue": sprite_index = spr_player_vault_neonsign_blue; break;
+				case "yellow": sprite_index = spr_player_vault_neonsign_yellow; break;
+				case "green": sprite_index = spr_player_vault_neonsign_green; break;
+			};
+		break;
 		case "torch": {sprite_index = spr_player_vault_torch} 
 		break;
 		default:
@@ -533,6 +541,14 @@ switch (anamation_state)
 			if (glowsticks_held > 0) {sprite_index = spr_player_fall_glowsticks}
 			else {sprite_index = spr_player_fall}
 		break;
+		case "neonsign": 
+			switch (sign_color) {
+				case "red": sprite_index = spr_player_fall_neonsign_red; break;
+				case "blue": sprite_index = spr_player_fall_neonsign_blue; break;
+				case "yellow": sprite_index = spr_player_fall_neonsign_yellow; break;
+				case "green": sprite_index = spr_player_fall_neonsign_green; break;
+			};
+		break;
 		case "torch": {sprite_index = spr_player_fall_torch} 
 		break;
 		default:
@@ -545,6 +561,14 @@ switch (anamation_state)
 	case "walking":
 		if (using_armless) {sprite_index = spr_player_run_armless;}
 		else if (light == "lantern" and light_on) {sprite_index = spr_player_run_lantern;}
+		else if (light == "neonsign") { 
+			switch (sign_color) {
+				case "red": sprite_index = spr_player_run_neonsign_red; break;
+				case "blue": sprite_index = spr_player_run_neonsign_blue; break;
+				case "yellow": sprite_index = spr_player_run_neonsign_yellow; break;
+				case "green": sprite_index = spr_player_run_neonsign_green; break;
+			};
+		}
 		else {sprite_index = spr_player_run}
 		if (vel_x > 0) {image_xscale = -abs(image_xscale);}
 		else if (vel_x < 0) {image_xscale = abs(image_xscale)}
@@ -555,6 +579,14 @@ switch (anamation_state)
 	default: 
 		if (using_armless) {sprite_index = spr_player_idle_armless;}
 		else if (light == "lantern" and light_on) {sprite_index = spr_player_idle_lantern;}
+		else if (light == "neonsign") {
+			switch (sign_color) {
+				case "red": sprite_index = spr_player_idle_neonsign_red; break;
+				case "blue": sprite_index = spr_player_idle_neonsign_blue; break;
+				case "yellow": sprite_index = spr_player_idle_neonsign_yellow; break;
+				case "green": sprite_index = spr_player_idle_neonsign_green; break;
+			};
+		}
 		else {sprite_index = spr_player_idle}
 		
 }
