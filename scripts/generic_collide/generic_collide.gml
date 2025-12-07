@@ -4,11 +4,6 @@ function generic_collide(id){
 with (id) {
 collided_object = move_with_collision(id, x, y, vel_x, vel_y, [game_master.collision_tilemap, collides_with_player]);
 while (remainder_x != 0 or remainder_y != 0) {
-	if ((instance_place(x+2, y, collides_with_player) != noone) or
-			(instance_place(x-2, y, collides_with_player) != noone))
-			{
-							
-			}
 	//collision arrays, each if corrisponds to the effect of colliding with something
 	switch (collided_object)
 		{

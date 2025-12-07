@@ -1,16 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
+cooldown = 0;
+unit_state = "hang"
+stun_timer = 0;
 max_health = 200;
 
 image_xscale = 0.1;
 image_yscale = 0.1;
-randomise();
-angle = degtorad(random(360))
-show_debug_message(angle)
-vel_x = cos(angle)*5;
-vel_y = sin(angle)*5;
-remainder_x = 0;
-remainder_y = 0;
+
+grapple_object = noone;
+grapple_retract_speed = 30;
+
+attack_object = noone;
+effects_immune = ["stick"];
 
 
 

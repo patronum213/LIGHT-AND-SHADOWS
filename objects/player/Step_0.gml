@@ -93,7 +93,7 @@ function on_damage(dealer) {
 			attack = instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 50});
 		}
 		motion_state = "attack";
-		parry_state = 5;
+		parry_state = 50//5;
 	};
 	if (mouse_check_button_pressed(mb_right)and array_contains(inventory, "test item")) {
 		attack = instance_create_layer(x, y, "Instances", bullet, {owner : id, damage: 50, vel_x: 1, vel_y: 0});

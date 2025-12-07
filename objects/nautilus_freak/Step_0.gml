@@ -9,6 +9,7 @@ atk_progress = 0;
 var attack_distance_x = 100;
 var attack_distance_y = 100;
 var motion_vel = 1;//positive as a default
+if (!global.paused) {
 if (item_holding == "no_item") {
 	//targeting
 	//if (!(point_distance(x, y, player.x, player.y) < attack_distance)) {}
@@ -109,5 +110,6 @@ switch (unit_state)
 	default: 
 		sprite_index = spr_freak_naut_idle
 		
+}
 }
 event_inherited();
