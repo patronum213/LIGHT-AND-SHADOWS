@@ -5,7 +5,7 @@ vspeed = 0;
 gravity = 0;
 on_wall = false;
 
-if (!global.paused or !in_dialogue ) {
+if (!global.paused or in_dialogue ) {
 /*------------------------*/
 /*     regular motion     */
 /*------------------------*/
@@ -133,7 +133,7 @@ function on_damage(dealer) {
 		case "lantern":
 			if (mouse_check_button_pressed(mb_right)) {
 				if !(instance_exists(light_object)) {
-					light_object = instance_create_layer(x, y,"Instances", lantern_light, {damage: 0});
+					light_object = instance_create_layer(x, y,"Instances", lantern_light);
 				}
 				else if (instance_exists(light_object)) {
 					instance_destroy(light_object)

@@ -6,9 +6,9 @@ cooldown = 0;
 atk_progress = 0;
 */
 
-var attack_distance_x = 80;
-var attack_distance_y = 80;
-var motion_vel = 2;//positive as a default
+var attack_distance_x = 100;
+var attack_distance_y = 100;
+var motion_vel = 1;//positive as a default
 if (!global.paused) {
 if (item_holding == "no_item") {
 	//targeting
@@ -37,7 +37,7 @@ if (item_holding == "no_item") {
 	abs(y - player.y) <= attack_distance_y
 	) {
 		
-		if (choose(1,2) == 15) {
+		if (choose(1,2) == 1) {
 			unit_state = "grab_attack" 
 			cooldown = 280;
 		}

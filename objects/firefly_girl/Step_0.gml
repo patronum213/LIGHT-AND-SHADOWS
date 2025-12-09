@@ -6,7 +6,6 @@ mouse_check_button(mb_right) and
 collision_point(mouse_x, mouse_y, id, false, false) and
 (sqrt(power(player.x - x, 2) + power(player.y - y, 2)) < 300) and 
 !player.in_dialogue and !in_dialogue_with_player) {
-	global.paused = true;
 	player.in_dialogue = true;
 	in_dialogue_with_player = true; 
 	interaction_progress = 0;
@@ -56,7 +55,6 @@ if (in_dialogue_with_player and keyboard_check_pressed(vk_space)) {
 	layer_sprite_destroy(dialogue_box);
 	layer_text_destroy(dialogue_text);
 	player.in_dialogue = false;
-	global.paused = false;
 	in_dialogue_with_player = false;
 	layer_set_visible(game_master.dialogue_layer, false);
 	}
@@ -69,7 +67,4 @@ else if (player.x > x) {
 	sprite_index = spr_firefly_idle_looking
 }
 else {sprite_index = spr_firefly_idle_not_looking}
-
-if (in_dialogue_with_player) {}
-
 

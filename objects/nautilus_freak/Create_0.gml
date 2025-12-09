@@ -3,7 +3,7 @@
 cooldown = 0;
 unit_state = "free"
 atk_progress = 0;
-max_health = 1;
+max_health = 200;
 
 image_xscale = 0.1;
 image_yscale = 0.1;
