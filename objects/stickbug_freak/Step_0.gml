@@ -34,11 +34,17 @@ switch (unit_state)
 	break;
 	case "grapple_attack":
 		//sprite_index = spr_freak_stickbug_grapple
-		if (instance_place(x, y, player)) {//if we're colliding with the player
+		if (instance_place(x, y, player)or 
+			check_tilemap(game_master.collision_tilemap, 1, 0) or
+			check_tilemap(game_master.collision_tilemap, -1, 0) or
+			check_tilemap(game_master.collision_tilemap, 0, 1) or
+			check_tilemap(game_master.collision_tilemap, 0, -1)) {//when we hit something
 			instance_destroy(grapple_object);
 			grapple_object = noone;
 			vel_x = 0;
 			vel_y = 0;
+			instance_destroy(attack_object);
+			attack_object = noone;
 			unit_state = "stunned";//stop our attack
 		}
 	break;

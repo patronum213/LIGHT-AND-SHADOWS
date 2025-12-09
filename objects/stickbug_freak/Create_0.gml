@@ -12,7 +12,6 @@ grapple_object = noone;
 grapple_retract_speed = 30;
 
 attack_object = noone;
-effects_immune = ["stick"];
 
 
 

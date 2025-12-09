@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_lantern_light",
-    "path":"sprites/spr_lantern_light/spr_lantern_light.yy",
+    "name":"spr_ball_freak",
+    "path":"sprites/spr_ball_freak/spr_ball_freak.yy",
   },
   "spriteMaskId":null,
   "visible":true,

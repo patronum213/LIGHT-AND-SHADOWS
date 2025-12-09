@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_freak_1_idle_shield",
-    "path":"sprites/spr_freak_1_idle_shield/spr_freak_1_idle_shield.yy",
+    "name":"spr_freak_naut_idle",
+    "path":"sprites/spr_freak_naut_idle/spr_freak_naut_idle.yy",
   },
   "spriteMaskId":{
     "name":"spr_freak_naut_idle",

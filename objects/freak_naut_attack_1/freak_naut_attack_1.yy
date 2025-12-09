@@ -33,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"hitbox_naut_attack_basic_1",
-    "path":"sprites/hitbox_naut_attack_basic_1/hitbox_naut_attack_basic_1.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":{
     "name":"hitbox_naut_attack_basic_1",
     "path":"sprites/hitbox_naut_attack_basic_1/hitbox_naut_attack_basic_1.yy",

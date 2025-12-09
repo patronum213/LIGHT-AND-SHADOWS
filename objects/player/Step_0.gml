@@ -591,8 +591,3 @@ switch (anamation_state)
 		
 }
 }
-
-
-
-
-
