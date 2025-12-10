@@ -7,7 +7,8 @@ function get_item_data(Item_Name){
 	Item_Data = {
 		name: ini_read_string(Item_Name, "name", "no_item_name"), 
 		image: asset_get_index(ini_read_string(Item_Name, "image", "test_sprite")), 
-		tooltip: ini_read_string(Item_Name, "tooltip", "no_tooltip")
+		tooltip: ini_read_string(Item_Name, "tooltip", "no_tooltip"), 
+		flavor: ini_read_string(Item_Name, "flavor", "no_flavor")
 	}
 	show_debug_message("read item data")
 	//else {show_error("could not fetch item '" + Item_Name, true)}
@@ -20,7 +21,8 @@ function get_light_item_data(Item_Name) {
 	Item_Data = {
 		name: ini_read_string(Item_Name, "name", "no_item_name"),
 		image: asset_get_index(ini_read_string(Item_Name, "image", "test_sprite")), 
-		tooltip: ini_read_string(Item_Name, "tooltip", "no_tooltip"),
+		tooltip: ini_read_string(Item_Name, "tooltip", "no_tooltip"), 
+		flavor: ini_read_string(Item_Name, "flavor", "no_flavor"),
 		light_id: Item_Name
 	}
 	show_debug_message("read item data")

@@ -9,7 +9,7 @@ in_dialogue = false;
 
 my_health = 10;
 
-inventory = ["test_paper", "test_clay", "test_flower"];
+inventory = ["test_paper", "test_clay", "bandaid"];
 inventory_open = false;
 inventory_UI_object = noone
 
