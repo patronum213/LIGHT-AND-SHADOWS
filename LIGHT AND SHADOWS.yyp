@@ -140,6 +140,7 @@
     {"id":{"name":"UI_item_tooltip","path":"objects/UI_item_tooltip/UI_item_tooltip.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+    {"id":{"name":"RoomUI","path":"roomui/RoomUI/RoomUI.yy",},},
     {"id":{"name":"check_collision","path":"scripts/check_collision/check_collision.yy",},},
     {"id":{"name":"check_tilemap","path":"scripts/check_tilemap/check_tilemap.yy",},},
     {"id":{"name":"do_damage","path":"scripts/do_damage/do_damage.yy",},},
