@@ -15,12 +15,13 @@ if (!global.paused) {
 switch (unit_state)
 {
 	case "hang":
-		//sprite_index = spr_freak_stickbug_hang;
+		sprite_index = spr_freak_stickbug_hang;
 		if (cooldown > 0) {cooldown -=1;}
 		if (cooldown <= 0 and
 			abs(x - player.x) <= attack_distance_x and
 			abs(y - player.y) <= attack_distance_y
 		) {
+				sprite_index = spr_freak_stickbug_shoot_ceiling;
 				cooldown = 50;
 				grapple_object = instance_create_layer(x, y, "Instances", stickbug_grapple, {owner: id, target_angle: radtodeg(arctan2((player.y-y),(player.x-x)))});
 		}
@@ -33,7 +34,7 @@ switch (unit_state)
 		}
 	break;
 	case "grapple_attack":
-		//sprite_index = spr_freak_stickbug_grapple
+		sprite_index = spr_freak_stickbug_fly;
 		if (instance_place(x, y, player)or 
 			check_tilemap(game_master.collision_tilemap, 1, 0) or
 			check_tilemap(game_master.collision_tilemap, -1, 0) or
@@ -49,9 +50,10 @@ switch (unit_state)
 		}
 	break;
 	case "stunned":
-		//sprite_index = spr_freak_stickbug_stunned
+		sprite_index = spr_freak_stickbug_stunned;
 		stun_timer += 1;
 		if (stun_timer = 80) {//get up and escape
+			sprite_index = spr_freak_stickbug_shoot_floor;
 			stun_timer = 0;
 			grapple_object = instance_create_layer(x, y, "Instances", stickbug_grapple, {owner: id, target_angle: -random(180)});
 		}
@@ -60,10 +62,13 @@ switch (unit_state)
 			vel_x = to_target_vectors[0];
 			vel_y = to_target_vectors[1];
 			unit_state = "escaping";
+			break;
 		}
+		
+		
 	break;
 	case "escaping":
-		//sprite_index = spr_freak_stickbug_grapple
+		sprite_index = spr_freak_stickbug_fly;
 		if (
 			check_tilemap(game_master.collision_tilemap, 1, 0) or
 			check_tilemap(game_master.collision_tilemap, -1, 0) or
@@ -80,7 +85,6 @@ switch (unit_state)
 	break;
 	case "free":
 	default: 
-		//sprite_index = spr_freak_naut_idle
 		
 }
 }
