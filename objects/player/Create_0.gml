@@ -16,11 +16,11 @@ inventory_UI_object = noone
 light = "lantern" 
 light_charge = 5000;
 light_on = false;
+light_object = noone;
 
 glowsticks_held = 0;
 glowstick_tick_down = 0;
-glowstick_color = make_color_hsv(0,0,255)
-light_object = noone
+glowstick_color = make_color_hsv(0,0,255);
 
 tubelight_broken = false;
 

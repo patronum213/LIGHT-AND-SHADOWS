@@ -8,8 +8,8 @@
   "name":"terrain_generator",
   "overriddenProperties":[],
   "parent":{
-    "name":"technical_objects",
-    "path":"folders/Objects/technical_objects.yy",
+    "name":"rooms",
+    "path":"folders/Objects/technical_objects/rooms.yy",
   },
   "parentObjectId":null,
   "persistent":true,

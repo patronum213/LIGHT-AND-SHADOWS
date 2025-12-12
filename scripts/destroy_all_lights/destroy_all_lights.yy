@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"destroy_all_lights",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"destroy_all_lights",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

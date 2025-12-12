@@ -1,17 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"room_transfer",
+  "%Name":"door_lighthouse_2_to_3",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"room_transfer",
+  "name":"door_lighthouse_2_to_3",
   "overriddenProperties":[],
   "parent":{
-    "name":"technical_objects",
-    "path":"folders/Objects/technical_objects.yy",
+    "name":"room transfers",
+    "path":"folders/Objects/technical_objects/rooms/room transfers.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"door_parent",
+    "path":"objects/door_parent/door_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"test_sprite",
-    "path":"sprites/test_sprite/test_sprite.yy",
+    "name":"lighthouse_stair_up",
+    "path":"sprites/lighthouse_stair_up/lighthouse_stair_up.yy",
   },
   "spriteMaskId":null,
   "visible":true,

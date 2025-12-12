@@ -10,3 +10,5 @@ color = make_color_hsv(0, 0, 0.075 * 255);
 global.paused = false;
 global.enemies_in_room = [];
 global.enemies_in_queue = [];
+global.prev_room = Room1;
+global.entry_point = starting_pos;

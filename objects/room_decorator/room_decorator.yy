@@ -1,15 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"room_object_control",
+  "%Name":"room_decorator",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"room_object_control",
+  "name":"room_decorator",
   "overriddenProperties":[],
   "parent":{
-    "name":"technical_objects",
-    "path":"folders/Objects/technical_objects.yy",
+    "name":"rooms",
+    "path":"folders/Objects/technical_objects/rooms.yy",
   },
   "parentObjectId":null,
   "persistent":true,

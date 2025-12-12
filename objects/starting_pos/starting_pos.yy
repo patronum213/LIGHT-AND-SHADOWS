@@ -6,8 +6,8 @@
   "name":"starting_pos",
   "overriddenProperties":[],
   "parent":{
-    "name":"technical_objects",
-    "path":"folders/Objects/technical_objects.yy",
+    "name":"room transfers",
+    "path":"folders/Objects/technical_objects/rooms/room transfers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

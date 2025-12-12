@@ -1,12 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
-if (new_room) {
-player.xstart = starting_pos.x;
-player.ystart = starting_pos.y;
+/*if (new_room) {
+player.xstart = entry_point.x;
+player.ystart = entry_point.y;
 player.x = player.xstart;
 player.y = player.ystart;
 new_room = false;
-}
+}*/
 camera = {
 	id : camera_get_active(),
 	x : camera_get_view_x(view_camera[0]),
