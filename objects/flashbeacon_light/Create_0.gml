@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 owner = player.id;
-damage = 100;
+damage = 700;
 alpha = 1;
 
 color = make_color_hsv(20, 50, 255);

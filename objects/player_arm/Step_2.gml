@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+depth = player.depth-1
 if (player.using_armless) {
 	image_alpha = 1;
 	switch (player.light) {

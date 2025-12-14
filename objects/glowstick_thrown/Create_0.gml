@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 owner = player.id;
-damage = 40;
+damage = 1;
 charge = 100;
 
 if !(variable_instance_exists(id, "vel_x")) {vel_x=0};

@@ -2,9 +2,9 @@
   "$GMSprite":"v2",
   "%Name":"lighthouse_floor_1",
   "bboxMode":0,
-  "bbox_bottom":1546,
+  "bbox_bottom":1889,
   "bbox_left":0,
-  "bbox_right":3347,
+  "bbox_right":3359,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"5be6b13f-4c8f-4cbd-8df6-a11bdf273141","name":"5be6b13f-4c8f-4cbd-8df6-a11bdf273141","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"5ff5166a-9564-4bdd-870f-ce387e50a855","name":"5ff5166a-9564-4bdd-870f-ce387e50a855","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":1547,
+  "height":1890,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"d3c4c353-71d2-47e8-8381-3ebaa6d35738","blendMode":0,"displayName":"default","isLocked":false,"name":"d3c4c353-71d2-47e8-8381-3ebaa6d35738","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"aa1f579e-5d81-4162-85fd-6af80300efc0","blendMode":0,"displayName":"default","isLocked":false,"name":"aa1f579e-5d81-4162-85fd-6af80300efc0","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"lighthouse_floor_1",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5be6b13f-4c8f-4cbd-8df6-a11bdf273141","path":"sprites/lighthouse_floor_1/lighthouse_floor_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"fe7fd753-0efa-4aa2-bb71-b2a7cee875b8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"5ff5166a-9564-4bdd-870f-ce387e50a855","path":"sprites/lighthouse_floor_1/lighthouse_floor_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"52e0e605-72ab-48ee-9a92-592b36d98168","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -86,5 +86,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":3348,
+  "width":3360,
 }

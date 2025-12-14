@@ -11,7 +11,10 @@
     "name":"lighting_system",
     "path":"folders/Objects/lighting_system.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"light_parent",
+    "path":"objects/light_parent/light_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

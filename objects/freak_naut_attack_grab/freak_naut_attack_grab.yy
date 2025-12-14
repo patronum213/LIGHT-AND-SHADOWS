@@ -33,10 +33,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"hitbox_naut_attack_grab",
-    "path":"sprites/hitbox_naut_attack_grab/hitbox_naut_attack_grab.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":{
     "name":"hitbox_naut_attack_grab",
     "path":"sprites/hitbox_naut_attack_grab/hitbox_naut_attack_grab.yy",

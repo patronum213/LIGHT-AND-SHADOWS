@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-x = parent.x + 50*number-350*floor(number/7)
+x = parent.x + 50*number-35*floor(number/7)
 y = parent.y + 50*floor(number/7)
 if (position_meeting(mouse_x, mouse_y, id)) {
 	if !(instance_exists(my_tooltip)) {

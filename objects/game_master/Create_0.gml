@@ -12,3 +12,12 @@ global.enemies_in_room = [];
 global.enemies_in_queue = [];
 global.prev_room = Room1;
 global.entry_point = starting_pos;
+
+global.lighthouse_map_scale = 0.18;
+
+
+global.firefly_spoken = false;
+
+global.wizard_spoken = false;
+
+global.lady_spoken = false;

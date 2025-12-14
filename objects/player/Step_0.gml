@@ -5,7 +5,7 @@ vspeed = 0;
 gravity = 0;
 on_wall = false;
 
-if (!global.paused or in_dialogue ) {
+if (!global.paused and !in_dialogue) {
 /*------------------------*/
 /*     regular motion     */
 /*------------------------*/
@@ -93,7 +93,7 @@ function on_damage(dealer) {
 			attack = instance_create_layer(x, y, "Instances", sword_swing, {owner : id, damage: 50});
 		}
 		motion_state = "attack";
-		parry_state = 50//5;
+		parry_state = 10//5;
 	};
 	if (mouse_check_button_pressed(mb_right)and array_contains(inventory, "test item")) {
 		attack = instance_create_layer(x, y, "Instances", bullet, {owner : id, damage: 50, vel_x: 1, vel_y: 0});
@@ -401,10 +401,17 @@ while (remainder_x != 0 or remainder_y != 0) {
 		}
 		collided_object = move_with_collision(id, x, y, remainder_x, remainder_y, [game_master.collision_tilemap, collides_with_player]);
 		//if (collided_object == noone) {remainder_x = 0; remainder_y = 0;}
-		show_debug_message(remainder_y)
+		show_debug_message(remainder_y);
 		
+		if (prev_remainder_x == remainder_x and 
+		prev_remainder_y == remainder_y) {
+		remainder_x = 0;
+		remainder_y = 0;
+		}
+		
+		prev_remainder_x = remainder_x;
+		prev_remainder_y = remainder_y;
 }
-
 }
 /*------------------------*/
 /*     Motion States      */
@@ -456,7 +463,11 @@ prev_motion_state = motion_state;
 
 if (keyboard_check_pressed((ord("T")))) {x = mouse_x; y = mouse_y};//dev hax
 }
-	
+
+if (keyboard_check_pressed((ord("Y")))) {godmode = !godmode};
+
+//if (godmode) {my_health = 10}	
+
 /*------------------------*/
 /*       inventory        */
 /*------------------------*/

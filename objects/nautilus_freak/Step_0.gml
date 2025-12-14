@@ -37,7 +37,7 @@ if (item_holding == "no_item") {
 	abs(y - player.y) <= attack_distance_y
 	) {
 		
-		if (choose(1,2) == 1) {
+		if (choose(1,2) == 1 and !(player.inventory == [])) {
 			unit_state = "grab_attack" 
 			cooldown = 280;
 		}

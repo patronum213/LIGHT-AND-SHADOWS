@@ -10,9 +10,12 @@
   "overriddenProperties":[],
   "parent":{
     "name":"inventory",
-    "path":"folders/Objects/items/inventory.yy",
+    "path":"folders/Objects/UI/inventory.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"UI_element_parent",
+    "path":"objects/UI_element_parent/UI_element_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

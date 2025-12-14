@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-damage = 40;
+damage = 1;
 
 if (!(variable_instance_exists(id, "color"))) {color = "red";};
 

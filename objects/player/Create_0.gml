@@ -3,17 +3,19 @@
 
 testing_light_index_number = 1;
 
+godmode = false;
+
 anamation_state = "start";
 paused = false;
 in_dialogue = false;
 
 my_health = 10;
 
-inventory = ["bandaid", "dagger", "bagtrash", "bagtarget", "bagikea", "bat", "butter"];
+inventory = [];
 inventory_open = false;
 inventory_UI_object = noone
 
-light = "lantern" 
+light = "no_light" 
 light_charge = 5000;
 light_on = false;
 light_object = noone;
@@ -74,7 +76,8 @@ flying = false;
 remainder_x = 0;
 remainder_y = 0;
 
-
+prev_remainder_x = remainder_x;
+prev_remainder_y = remainder_y;
 
 ///multipliers
 walkspeed_mult = 1;

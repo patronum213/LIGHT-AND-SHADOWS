@@ -13,7 +13,10 @@
     "name":"freak_naut",
     "path":"folders/Objects/enemies/freak_naut.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"player_arm",
+    "path":"objects/player_arm/player_arm.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

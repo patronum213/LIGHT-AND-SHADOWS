@@ -1,11 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+show_debug_message(player.in_dialogue)
 if (
 mouse_check_button(mb_right) and 
 collision_point(mouse_x, mouse_y, id, false, false) and
 (sqrt(power(player.x - x, 2) + power(player.y - y, 2)) < 300) and 
 !player.in_dialogue and !in_dialogue_with_player) {
+	
+	if (global.firefly_spoken == true) {
+	dialogue = ["Its right. Do you? Not know what direction is right?", "unless you have a death wish just. Just head thataway"]
+	}
+	
+	
+	global.firefly_spoken = true;
 	player.in_dialogue = true;
 	in_dialogue_with_player = true; 
 	interaction_progress = 0;
