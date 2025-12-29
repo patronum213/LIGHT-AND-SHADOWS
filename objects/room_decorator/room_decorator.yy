@@ -12,7 +12,7 @@
     "path":"folders/Objects/technical_objects/rooms.yy",
   },
   "parentObjectId":null,
-  "persistent":false,
+  "persistent":true,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
   "physicsFriction":0.2,
