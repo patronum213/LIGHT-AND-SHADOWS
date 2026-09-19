@@ -354,7 +354,7 @@ if (can_walk) {
 /*------------------------*/
 {
 //move with pixel-perfect collision checking
-collided_object = move_with_collision(id, x, y, vel_x, vel_y, [game_master.collision_tilemap, collides_with_player]);
+/*collided_object = move_with_collision(id, x, y, vel_x, vel_y, [game_master.collision_tilemap, collides_with_player]);
 while (remainder_x != 0 or remainder_y != 0) {
 	show_debug_message(id)
 	//collision arrays, each if corrisponds to the effect of colliding with something
@@ -404,7 +404,8 @@ while (remainder_x != 0 or remainder_y != 0) {
 		show_debug_message(remainder_y)
 		
 }
-
+*/
+collided_object = physics_motion(id, x, y, vel_x, vel_y, [game_master.collision_tilemap, collides_with_player]);
 }
 /*------------------------*/
 /*     Motion States      */

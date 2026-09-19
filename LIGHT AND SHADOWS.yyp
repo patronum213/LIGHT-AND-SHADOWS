@@ -197,6 +197,8 @@
     {"id":{"name":"light_set_size","path":"scripts/light_set_size/light_set_size.yy",},},
     {"id":{"name":"light_set_sprite","path":"scripts/light_set_sprite/light_set_sprite.yy",},},
     {"id":{"name":"move_with_collision","path":"scripts/move_with_collision/move_with_collision.yy",},},
+    {"id":{"name":"normalize_vector_components","path":"scripts/normalize_vector_components/normalize_vector_components.yy",},},
+    {"id":{"name":"physics_motion","path":"scripts/physics_motion/physics_motion.yy",},},
     {"id":{"name":"shd_blur","path":"shaders/shd_blur/shd_blur.yy",},},
     {"id":{"name":"ad_billboard_1","path":"sprites/ad_billboard_1/ad_billboard_1.yy",},},
     {"id":{"name":"ad_billboard_2","path":"sprites/ad_billboard_2/ad_billboard_2.yy",},},
@@ -335,8 +337,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Lighthouse1","path":"rooms/Lighthouse1/Lighthouse1.yy",},},
     {"roomId":{"name":"Lighthouse2","path":"rooms/Lighthouse2/Lighthouse2.yy",},},
     {"roomId":{"name":"Lighthouse3","path":"rooms/Lighthouse3/Lighthouse3.yy",},},
