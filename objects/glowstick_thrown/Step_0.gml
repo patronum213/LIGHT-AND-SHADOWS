@@ -28,4 +28,4 @@ if (grounded) {
 //gravity
 vel_y += 1
 
-generic_collide(id);
+collided_object = physics_motion(id, x, y, vel_x, vel_y, [game_master.collision_tilemap, collides_with_player]);

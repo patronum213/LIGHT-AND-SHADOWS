@@ -13,7 +13,7 @@ inventory = ["bandaid", "dagger", "bagtrash", "bagtarget", "bagikea", "bat", "bu
 inventory_open = false;
 inventory_UI_object = noone
 
-light = "lantern" 
+light = "tubelight" 
 light_charge = 5000;
 light_on = false;
 light_object = noone;
