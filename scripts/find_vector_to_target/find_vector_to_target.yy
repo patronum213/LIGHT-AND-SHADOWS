@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"find_vector_to_target",
   "parent":{
-    "name":"Scripts",
-    "path":"folders/Scripts.yy",
+    "name":"util",
+    "path":"folders/Scripts/util.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

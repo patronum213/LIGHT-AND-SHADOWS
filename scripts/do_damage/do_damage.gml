@@ -13,8 +13,7 @@ function do_damage(taker, amount, dealer = id, special = ["none"]) {
 		with (taker) {
 			my_health = my_health - amount
 			iframes = 10;
-			show_debug_message("hit registered on entity: ")
-			show_debug_message(id)
+			show_debug_message("hit registered on entity: " + id)
 			if (variable_instance_exists(id, "on_damage")) {
 				on_damage(dealer)
 				show_debug_message("called on_damage function")

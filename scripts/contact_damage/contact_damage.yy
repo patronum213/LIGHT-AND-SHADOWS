@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"destroy_all_lights",
+  "%Name":"contact_damage",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"destroy_all_lights",
+  "name":"contact_damage",
   "parent":{
-    "name":"Fast Lights",
-    "path":"folders/Scripts/Fast Lights.yy",
+    "name":"combat",
+    "path":"folders/Scripts/combat.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
