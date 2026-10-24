@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"special_effects",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"special_effects",
+  "parent":{
+    "name":"combat",
+    "path":"folders/Scripts/combat.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

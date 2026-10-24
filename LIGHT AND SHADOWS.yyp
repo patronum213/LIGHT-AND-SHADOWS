@@ -199,6 +199,7 @@
     {"id":{"name":"light_set_sprite","path":"scripts/light_set_sprite/light_set_sprite.yy",},},
     {"id":{"name":"normalize_vector_components","path":"scripts/normalize_vector_components/normalize_vector_components.yy",},},
     {"id":{"name":"physics_motion","path":"scripts/physics_motion/physics_motion.yy",},},
+    {"id":{"name":"special_effects","path":"scripts/special_effects/special_effects.yy",},},
     {"id":{"name":"shd_blur","path":"shaders/shd_blur/shd_blur.yy",},},
     {"id":{"name":"ad_billboard_1","path":"sprites/ad_billboard_1/ad_billboard_1.yy",},},
     {"id":{"name":"ad_billboard_2","path":"sprites/ad_billboard_2/ad_billboard_2.yy",},},
